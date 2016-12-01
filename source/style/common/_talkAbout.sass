@@ -1,0 +1,78 @@
+
+.talkAbout
+	height: 1355px
+	padding: 60px 30px 185px
+	width: 100%
+	background: #eee url('../img/beacon-bg.png') 0 0 no-repeat
+	background-size: cover
+	display: flex
+	flex-direction: column
+	align-items: center
+	
+	.mainTitle
+		color: #fff
+		margin-bottom: 60px
+	.scrollDown
+		margin-bottom: 70px
+.recomendations
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 70px
+.rec
+	&_item
+		max-width: 393px
+		padding: 0 10px 0
+		display: flex
+		flex-direction: column
+		align-items: center
+		// min-width: Xpx
+		color: #fff
+		strong
+			margin-left: 10px
+	&_text
+		margin: 0 0 20px
+		font: 16px/26px 'RobotoLight', sans-serif
+		font-style: italic
+	&_pic
+		@include size(77px)
+		border-radius: 50%
+		margin-bottom: 15px
+		background-color: #FFF
+		overflow: hidden
+		
+.feedback
+	width: 380px
+	background-color: rgba(255,255,255, .05)
+	margin-bottom: 62px
+	&_wrap
+		padding: 38px 20px 20px 20px
+	.content_title
+		padding-bottom: 25px
+		margin-bottom: 25px
+	&_item
+		font: 16px/24px 'RobotoRegilar',sans-serif
+		color: rgba(255,255,255, .5)
+		background-color: rgba(255,255,255, .07)
+		padding: 10px 16px
+		margin-bottom: 20px
+		width: 100%
+		border: 0
+		outline: none
+		&:last-child
+			margin-bottom: 0
+	textarea
+		resize: none
+	&_btnsBlock
+		display: flex
+	&_button
+		width: 50%
+		font: 16px/45px 'RobotoRegular', sans-serif
+		color:  rgba(255,255,255, .5)
+		background: transparent
+		border: 0
+		outline: none
+		transition: all ease-in-out .2s
+		&:hover,
+		&:active
+			background: $main-color
+			color: #fff

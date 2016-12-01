@@ -1,0 +1,51 @@
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RobotoMedium";
+    src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RobotoBold";
+    src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RobotoLight";
+    src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RobotoItalic";
+    src: url("../fonts/Roboto-Italic.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Sansus";
+    src: url("../fonts/Sansus-Webissimo-Regular.ttf") format("truetype");
+}
+
+
+
+// @mixin Roboto($style: regular){
+// 	font-family: 'Roboto';
+
+
+// 	@if ($style == light){
+// 		font-weght: 300;
+// 	}
+
+// 	@if ($style == regular){
+// 		font-weght: 400;
+// 	}
+
+// 	@if ($style == bold){
+// 		font-weght: 700;
+// 	}
+
+// 	@if ($style == medium){
+// 		font-weght: 500;
+// 	}
+	
+// }

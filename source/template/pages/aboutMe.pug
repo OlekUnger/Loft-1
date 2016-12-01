@@ -1,0 +1,80 @@
+extends ../_template
+
+block title
+  title About me
+
+block content
+ 
+      section#aboutMe.content.aboutMePage
+        include ../common/triangles
+        .content_wrapper
+          .content_item.content-left
+            .titleWrapper
+              h2.content_title.mainTitle Обо мне
+            article.introduce
+              .introduce_photo
+                img(src='./assets/img/photo.jpg')
+              .content_text
+                h3.content_title.content_title-markedDark Кто я
+                p
+                  | Я веб разработчик из Новосибирска. Мне 27 лет.
+                  | Я занимаюсь разработкой современных сайтов и приложений.
+                  | Мне нравится делать интересные и современные проекты.
+                p
+                  | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                  | Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+          .content_item.content-right
+            .content_text
+              h3.content_title.content_title-markedDark
+                | Чем я могу быть
+                br
+                |  вам полезен
+              p
+                | Больше всего меня привлекет Frontend разработка,
+                | но я также знаком и могу решать не сложные задачи на Backend.
+                | Но давайте по порядку.
+            .blockSkills
+              .blockSkills_row
+                h4.blockSkills_title Frontend
+                .skillCounter
+                  .skillCounter_item HTML5
+                  .skillCounter_item CSS3
+                  .skillCounter_item JavaScript &JQuery
+              .blockSkills_row
+                h4.blockSkills_title Backend
+                .skillCounter
+                  .skillCounter_item PHP
+                  .skillCounter_item mySQL
+                  .skillCounter_item
+                    | Node.js
+                    br
+                    |  & npm
+                  .skillCounter_item Mongo.db
+              .blockSkills_row
+                h4.blockSkills_title WorkFlow
+                .skillCounter
+                  .skillCounter_item Git
+                  .skillCounter_item Gulp
+                  .skillCounter_item Bower
+      section.map
+        .contacts
+          h3.content_title.content_title-markedDark Контакты
+          ul.nav_list
+            li.nav_item
+              a.nav_link(href='#') ungers37
+                svg.contacts_icon
+                  use(xlink:href='./assets/img/sprites/sprite.svg#skype_n')  
+            li.nav_item
+              a.nav_link(href='#') +7 921 441 66 75
+                svg.contacts_icon
+                  use(xlink:href='./assets/img/sprites/sprite.svg#phone_n') 
+  
+            li.nav_item
+              a.nav_link(href='#') ounger@inbox.ru
+                svg.contacts_icon
+                  use(xlink:href='./assets/img/sprites/sprite.svg#envelope_n')  
+            li.nav_item
+              a.nav_link(href='#') Saint-Petersburg
+                svg.contacts_icon
+                  use(xlink:href='./assets/img/sprites/sprite.svg#map_n') 
+    

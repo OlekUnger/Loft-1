@@ -1,0 +1,141 @@
+
+
+.headerSection
+    min-height: 650px
+    width: 100%
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-bottom: 75px
+    position: relative
+
+.header
+    padding: 30px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    
+.socials
+    font-size: 0
+    max-width: 150px
+    &_link
+        @include inline-middle
+        @include size (30px 25px)
+        margin-right: 25px
+        &:hover
+            .socials_icon
+                fill: $main-color
+        &:last-child
+            margin-right: 0
+    &_icon
+        fill: #fff
+        @include size (30px 25px)
+        transition: all ease-in-out .1s
+
+.menuButton
+    position: relative
+    width: 40px
+    height: 35px
+    cursor: pointer
+    z-index: 5
+    
+    span,
+    span::before,
+    span::after
+        position: absolute
+        content: ""
+        width: 40px
+        height: 5px
+        border-radius: 3px
+        background-color: #FFF
+        transition: all 500ms ease-in-out
+    span
+        top: 15px    
+        &::before
+            top: -15px
+        &::after
+            bottom: -15px
+    &.active
+        span
+            background: transparent
+    &.active 
+        span::before,
+        span::after
+            top: 0
+    &.active
+        span::before
+            transform:rotate(45deg)
+    &.active
+        span::after
+            transform:rotate(-45deg)
+
+.blockUser
+    min-width: 235px
+    padding-top: 33px
+    margin: auto
+    margin-top: 100px
+    color: #fff
+    display: flex
+    flex-direction: column
+    align-items: center
+    &_photo
+        width: 141px
+        height: 141px
+        border-radius: 50%
+        overflow: hidden
+        margin-bottom: 20px
+        position: relative
+        img
+            position: absolute
+            left: -90px
+            width: 250px
+            height: auto
+            
+    &_title
+        font: 35px/41px 'RobotoMedium', sans-serif
+        margin: 0
+    &_text
+        font: 16px/24px 'RobotoRegular',sans-serif
+        margin: 0
+
+.scrollDown
+    text-align: center
+    display: block
+    z-index: 2
+    @include size(26px 16px)
+    &_icon
+        @include size(26px 16px)
+        fill: #fff
+        fill-opacity: .7
+
+.blockSVG
+    @include size(50% 100%)
+    z-index: 1
+
+.content_top
+    position: absolute
+    height: 170px
+    width: 100%
+    display: flex
+    
+    .triangle
+        @include size(100%)
+        &-left
+            fill: #f2f0e8
+        &-right
+            fill: #f4f5f0
+
+.myWorksPage
+    .content_top
+        left: 0
+        top: -170px
+        .triangle
+            &-left
+                fill: rgba(17, 17, 33, .85)
+            &-right
+                fill: rgba(17, 17, 33, .85)
+
+.aboutMePage            
+    .content_top
+        top: -170px

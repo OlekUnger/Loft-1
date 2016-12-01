@@ -1,0 +1,56 @@
+
+.pageFooter
+    width: 100%
+    margin-top: -183px
+    &_content
+        background-color: rgba(28, 31, 41, .85)
+        min-height: 147px
+        padding: 25px 0
+        display: flex
+        justify-content: space-between
+
+    &_text
+        color: #fff
+        font: 16px/24px 'RobotoLight',sans-serif
+    &_bottom
+        background-color: rgba(8, 60, 150, .85)
+        text-align: center
+        padding: 6px 0
+    &_contentBlock
+        padding: 0px 30px
+        width: 33%
+        border-right: 1px solid rgba(255,255,255, 0.2)
+        &:last-child
+           border-right: none
+            min-width: 280px
+    .nav
+        margin-bottom: 40px
+        max-width: 460px
+        &_list
+            margin: 0 auto
+            list-style: none
+            padding: 0
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+        &_item
+            
+            flex-grow: 1
+            margin-right: 5px
+            &:last-child
+                margin-right: 0
+        &_link
+            display: inline-block
+            position: relative
+            font: 16px/24px 'RobotoMedium', sans-serif
+            text-decoration: none
+            color: #fff
+            &:hover
+                text-decoration: underline
+            &.active
+                text-decoration: underline
+    .socials_icon
+        fill-opacity: .5
+    .ft-wrap
+        max-width: 460px
+    
