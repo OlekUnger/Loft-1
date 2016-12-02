@@ -4,6 +4,7 @@
     position: relative
     width: 100%
     min-height: 650px
+    margin-top: -185px
     &_wrapper
         @include size(100%)
         display: flex
@@ -16,7 +17,7 @@
         position: relative
         overflow: hidden
     &_text
-       color: $dark
+        color: $dark
         p
             margin: 10px 0
             text-align: left    
@@ -45,14 +46,15 @@
                 bottom: 0
                 left: 50%
                 margin-left: -45px
-        &-markedDark
+        &-markedDark        
             color: $dark
             &::after
                 background-color: $dark
-        &-markedLight
+        &-markedLight       
             color: #fff
             &::after
                 background-color: rgba(255,255,255, .5)
+    
 // ************about me page
 
 .aboutMePage
@@ -74,7 +76,7 @@
                 margin-bottom: 35px
     &_title-markedDark
         display: block
-        text-align: center
+        text-align: center   
 .introduce
     @include text-truncate
     max-width: 440px
@@ -83,7 +85,7 @@
         margin-bottom: 30px
         background: white
         overflow: hidden
-
+                
 .blockSkills
     width: 100%
     display: flex
@@ -102,8 +104,7 @@
         flex-wrap: wrap
         &_item
             @include size(110px 110px)
-            border-radius: 50%
-            border: 20px solid #dfdcd5
+            position: relative
             font:12px/15px 'RobotoMedium', sans-serif
             text-align: center
             color: #243994 
@@ -114,6 +115,25 @@
             &:last-child
                 margin-right: 0
 
+    .cCircle
+        @include size(110px 110px)
+        position: absolute
+        top: 0
+        left: 0
+        fill: none
+        stroke-width: 20
+        circle:nth-child(1)
+            stroke: #dfdcd5
+            fill: none
+        circle:nth-child(2)
+            stroke: $main-color
+            stroke-dasharray: 162
+            stroke-dashoffset: 762
+            transition: all 1s
+
+
+
+            
 // *****************my works
 
 

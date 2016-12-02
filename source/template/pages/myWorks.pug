@@ -1,79 +1,79 @@
 extends ../_template
 
 block title
-  title My works
+   title My works
 
 block content
-    
-    section#myWorks.content.myWorksPage
-      include ../common/triangles
-      .content_header
-        h2.content_title.mainTitle Мои работы
-      .slider.slider_wrap
-        input#btn-1(type='radio', name='toggle', checked='')
-        input#btn-2(type='radio', name='toggle')
-        input#btn-3(type='radio', name='toggle')
-        input#btn-4(type='radio', name='toggle')
-        .slider_controls
-          label(for='btn-1')
-            span.icon-left
-          label(for='btn-2')
-            span.icon-right
-          label(for='btn-3')
-            span.icon-left
-          label(for='btn-4')
-            span.icon-right
-        .slider_nav
-          svg.navIcon.navIcon-left
-            use(xlink:href='./assets/img/sprite.svg#arrow_down')
-          svg.navIcon.navIcon-right
-            use(xlink:href='./assets/img/sprite.svg#arrow_down')
-        .slider_item
-          .slider_item-left
-          .slider_item-right
-            .site
-              h3.content_title.content_title-markedDark Сайт школы онлайн образования
-              p.site_text HTML, CSS, Javascript
-              a.site_linkBtn(href='#')
-                | Посмотреть сайт
-                svg.siteIcon
-                  use(xlink:href='img/sprite.svg#link')
-      .slider_item
-    section.talkAbout
-      h2.content_title.mainTitle
-        | Что обо мне 
-        br
-        | говорят
-      .recomendations
-        .rec_item
-          .rec_pic
-            img(src='./assets/img/m-photo1.png', alt='')
-          blockquote.rec_text
-            | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
-            | 2 месяца только самых тяжелых испытаний и бессонных ночей!
-          cite
-            strong Ковальчук Дмитрий
+      
+      section#content.content.myWorksPage
+         include ../common/triangles
+         .content_header
+            h2.content_title.mainTitle Мои работы
+         .slider.slider_wrap
+            input#btn-1(type='radio', name='toggle', checked='')
+            input#btn-2(type='radio', name='toggle')
+            input#btn-3(type='radio', name='toggle')
+            input#btn-4(type='radio', name='toggle')
+            .slider_controls
+               label(for='btn-1')
+                  span.icon-left
+               label(for='btn-2')
+                  span.icon-right
+               label(for='btn-3')
+                  span.icon-left
+               label(for='btn-4')
+                  span.icon-right
+            .slider_nav
+               svg.navIcon.navIcon-left
+                  use(xlink:href='./assets/img/sprite.svg#arrow_down')
+               svg.navIcon.navIcon-right
+                  use(xlink:href='./assets/img/sprite.svg#arrow_down')
+            .slider_item
+               .slider_item-left
+               .slider_item-right
+                  .site
+                     h3.content_title.content_title-markedDark Сайт школы онлайн образования
+                     p.site_text HTML, CSS, Javascript
+                     a.site_linkBtn(href='#')
+                        | Посмотреть сайт
+                        svg.siteIcon
+                           use(xlink:href='img/sprite.svg#link')
+         .slider_item
+      section.talkAbout
+         h2.content_title.mainTitle
+            | Что обо мне 
             br
-            | - основатель Loftschool
-        .rec_item
-          .rec_pic
-            img(src='./assets/img/m-photo2.jpg', alt='')
-          blockquote.rec_text
-            | Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-          cite
-            strong Зар Захаров
-            br
-            | - преподаватель
-      form.feedback(action='#')
-        .feedback_wrap
-          h3.content_title.content_title-markedLight Связаться со мной
-          input.feedback_item(type='text', placeholder='Ваше имя')
-          input.feedback_item(type='text', placeholder='Ваш email')
-          textarea.feedback_item(name='', id='', cols='10', rows='5', placeholder='Ваше сообщение')
-        .feedback_btnsBlock
-          button.feedback_button.btnSubmit Отправить
-          button.feedback_button.btnReset Очистить
-      a.scrollDown(href='#header')
-        svg.scrollDown_icon
-          use(xlink:href='./assets/img/sprites/sprite.svg#portf_arrow_up')
-    
+            | говорят
+         .recomendations
+            .rec_item
+               .rec_pic
+                  img(src='./assets/img/m-photo1.png', alt='')
+               blockquote.rec_text
+                  | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
+                  | 2 месяца только самых тяжелых испытаний и бессонных ночей!
+               cite
+                  strong Ковальчук Дмитрий
+                  br
+                  | - основатель Loftschool
+            .rec_item
+               .rec_pic
+                  img(src='./assets/img/m-photo2.jpg', alt='')
+               blockquote.rec_text
+                  | Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+               cite
+                  strong Зар Захаров
+                  br
+                  | - преподаватель
+         form.feedback(action='#')
+            .feedback_wrap
+               h3.content_title.content_title-markedLight Связаться со мной
+               input.feedback_item(type='text', placeholder='Ваше имя')
+               input.feedback_item(type='text', placeholder='Ваш email')
+               textarea.feedback_item(name='', id='', cols='10', rows='5', placeholder='Ваше сообщение')
+            .feedback_btnsBlock
+               button.feedback_button.btnSubmit Отправить
+               button.feedback_button.btnReset Очистить
+         a.scrollDown(href='#header')
+            svg.scrollDown_icon
+               use(xlink:href='./assets/img/sprites/sprite.svg#portf_arrow_up')
+      
