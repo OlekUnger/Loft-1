@@ -1,0 +1,53 @@
+.content
+    position: relative
+    width: 100%
+    min-height: 650px
+    margin-top: -185px
+    &_wrapper
+        @include size(100%)
+        display: flex
+        flex-direction: row
+    &_item
+        width: 50%
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        overflow: hidden
+    &_text
+        color: $dark
+        p
+            margin: 10px 0
+            text-align: left    
+    &_header
+        width: 100%
+        padding: 47px 0
+        text-align: center
+        background-color: rgba(17, 17, 33, .85)
+        
+.content
+    &_title
+        position: relative
+        text-transform: uppercase
+        font-family: 'Sansus'
+        text-align: center
+        color: $dark
+        &-markedDark,
+        &-markedLight
+            padding-bottom: 16px
+            margin-bottom: 15px
+            &::after
+                @include pseudo
+                @include size(90px 3px)
+                bottom: 0
+                left: 50%
+                margin-left: -45px
+        &-markedDark        
+            color: $dark
+            &::after
+                background-color: $dark
+        &-markedLight       
+            color: #fff
+            &::after
+                background-color: rgba(255,255,255, .5)
+    
