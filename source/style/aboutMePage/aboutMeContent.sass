@@ -1,0 +1,41 @@
+.aboutMePage
+    min-height: 650px
+    .content_top
+        top: -170px
+        .triangle
+            &-left
+                fill: #f2f0e8
+            &-right
+                fill: #f4f5f0
+
+    .mainTitle
+        float: left
+        padding: 26px 0
+        margin-top: -40px
+        margin-bottom: 25px 
+    .content 
+        &-left
+            padding: 20px 20px 25px
+            background-color:  #f2f0e8  
+        &-right
+            padding: 10px 40px 25px 40px
+            background-color: #f4f5f0
+            .content_title
+                margin-bottom: 35px
+    &_title-markedDark
+        display: block
+        text-align: center
+
+.introduce
+    @include text-truncate
+    max-width: 440px
+    &_photo
+        @include size(443px 390px)
+        margin-bottom: 30px
+        background: white
+        overflow: hidden
+
+
+@import "_map"
+@import "_blockSkills"
+

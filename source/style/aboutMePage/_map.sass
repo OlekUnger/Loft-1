@@ -1,0 +1,44 @@
+.map_wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 650px
+    height: 100vh
+.map_section
+    padding-bottom: 185px
+    background: #eae8e2 url('../img/map.png') no-repeat
+    background-size: cover
+    
+.contacts
+    padding: 30px 10px 0px
+    max-width: 580px
+    background-color: rgba(255,255,255, .7)
+        
+    .nav
+        &_list
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            width: 100%
+            margin-top: 38px
+        &_item
+            margin-bottom: 30px
+        &_link
+            position: relative
+            color: $dark
+            font: 16px/24px 'RobotoMedium', sans-serif
+            text-decoration: none
+            display: block
+            padding: 11px 10px 11px 65px
+            width: 280px
+            &:hover
+                .contacts_icon
+                    fill: $darkMain-color
+    &_icon
+        @include size(45px)
+        position: absolute
+        top: 0
+        left: 10px
+        fill: $main-color
+        transition: all ease-in-out .1s
+            

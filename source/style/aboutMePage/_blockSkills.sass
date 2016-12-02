@@ -1,0 +1,44 @@
+.blockSkills
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    margin-top: 40px
+    &_row:not(:last-child)
+        margin-bottom: 30px
+    &_title
+        text-align: left
+        margin-bottom: 10px
+        color: $dark
+    .skillCounter
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        &_item
+            @include size(110px 110px)
+            position: relative
+            font:12px/15px 'RobotoMedium', sans-serif
+            text-align: center
+            color: #243994 
+            margin: 0 35px 10px 0
+            display: flex
+            align-items: center
+            justify-content: center
+            &:last-child
+                margin-right: 0
+
+    .cCircle
+        @include size(110px 110px)
+        position: absolute
+        top: 0
+        left: 0
+        fill: none
+        stroke-width: 20
+        circle:nth-child(1)
+            stroke: #dfdcd5
+            fill: none
+        circle:nth-child(2)
+            stroke: $main-color
+            stroke-dasharray: 162
+            stroke-dashoffset: 762
+            transition: all 1s

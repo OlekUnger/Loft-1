@@ -1,0 +1,39 @@
+.myWorkPage
+    width: 100%
+    min-height: 650px
+    .content_top
+        left: 0
+        top: -170px
+        .triangle
+            &-left
+                fill: rgba(17, 17, 33, .85)
+            &-right
+                fill: rgba(17, 17, 33, .85)
+
+
+.myWorksPage
+    .content_title
+        &::after
+            background-color: rgba(71, 75, 87, .5)      
+    .mainTitle
+        color: #fff
+        padding-bottom: 20px
+        @include inline-top
+        &::after
+            @include pseudo
+            @include size(90px 3px)
+            bottom: 0
+            left: 50%
+            margin-left: -45px
+            background-color: #fff
+            opacity: 0
+            transition: all ease-in-out .4s
+        &:hover
+            &::after
+                opacity: 1
+
+@import "_slider"
+@import "_talkAbout"
+
+
+    
