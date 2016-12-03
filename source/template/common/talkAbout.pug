@@ -1,38 +1,40 @@
 section.talkAbout
-   h2.content_title.mainTitle
-      | Что обо мне 
-      br
-      | говорят
-   .recomendations
-      .rec_item
-         .rec_pic
-            img(src='./assets/img/m-photo1.png', alt='')
-         blockquote.rec_text
-            | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
-            | 2 месяца только самых тяжелых испытаний и бессонных ночей!
-         cite
-            strong Ковальчук Дмитрий
-            br
-            | - основатель Loftschool
-      .rec_item
-         .rec_pic
-            img(src='./assets/img/m-photo2.jpg', alt='')
-         blockquote.rec_text
-            | Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-         cite
-            strong Зар Захаров
-            br
-            | - преподаватель
-   form.feedback(action='#')
-      .feedback_wrap
-         h3.content_title.content_title-markedLight Связаться со мной
-         input.feedback_item(type='text', placeholder='Ваше имя')
-         input.feedback_item(type='text', placeholder='Ваш email')
-         textarea.feedback_item(name='', id='', cols='10', rows='5', placeholder='Ваше сообщение')
-      .feedback_btnsBlock
-         button.feedback_button.btnSubmit Отправить
-         button.feedback_button.btnReset Очистить
-   a.scrollDown(href='#header')
-      svg.scrollDown_icon
-         use(xlink:href='./assets/img/sprites/sprite.svg#portf_arrow_up')
-      
+   .wrap
+      h2.content_title.mainTitle
+         | Что обо мне 
+         br
+         | говорят
+      .recomendations
+         .rec_item
+            .rec_pic
+               img(src='./assets/img/m-photo1.png', alt='')
+            blockquote.rec_text
+               | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
+               | 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            cite
+               strong Ковальчук Дмитрий
+               br
+               | - основатель Loftschool
+         .rec_item
+            .rec_pic
+               img(src='./assets/img/m-photo2.jpg', alt='')
+            blockquote.rec_text
+               | Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            cite
+               strong Зар Захаров
+               br
+               | - преподаватель
+      form.feedback(action='#')
+         .feedback_wrap
+            h3.content_title.content_title-markedLight Связаться со мной
+            input.feedback_item(type='text', placeholder='Ваше имя')
+            input.feedback_item(type='text', placeholder='Ваш email')
+            textarea.feedback_item(name='', id='', cols='10', rows='5', placeholder='Ваше сообщение')
+         .feedback_btnsBlock
+            button.feedback_button.btnSubmit Отправить
+            button.feedback_button.btnReset Очистить
+      a.scrollDown(href='#header')
+         svg.scrollDown_icon
+            use(xlink:href='./assets/img/sprites/sprite.svg#portf_arrow_up')
+      .beacon
+         img(src='assets/img/beacon.png')
