@@ -1,20 +1,23 @@
-.myWorkPage
+.myWorksPage
     width: 100%
     min-height: 650px
-    .content_top
-        left: 0
-        top: -170px
-        .triangle
-            &-left
-                fill: rgba(17, 17, 33, .85)
-            &-right
-                fill: rgba(17, 17, 33, .85)
-
-
-.myWorksPage
-    .content_title
-        &::after
-            background-color: rgba(71, 75, 87, .5)      
+    .content
+        &_title
+            &::after
+                background-color: rgba(71, 75, 87, .5)
+        &_header
+            width: 100%
+            padding: 47px 0
+            text-align: center
+            background-color: rgba(17, 17, 33, .85)
+        &_top
+            left: 0
+            margin-top: -170px
+            .triangle
+                &-left
+                    fill: rgba(17, 17, 33, .85)
+                &-right
+                    fill: rgba(17, 17, 33, .85)
     .mainTitle
         color: #fff
         padding-bottom: 20px
@@ -34,6 +37,3 @@
 
 @import "_slider"
 @import "_talkAbout"
-
-
-    
