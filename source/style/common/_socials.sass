@@ -1,0 +1,16 @@
+.socials
+    font-size: 0
+    max-width: 150px
+    &_link
+        @include inline-middle
+        @include size (30px 25px)
+        margin-right: 25px
+        &:hover
+            .socials_icon
+                fill: $main-color
+        &:last-child
+            margin-right: 0
+    &_icon
+        fill: #fff
+        @include size (30px 25px)
+        transition: all ease-in-out .1s

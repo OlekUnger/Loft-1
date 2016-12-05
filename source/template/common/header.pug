@@ -1,27 +1,16 @@
 section.headerSection#header
 	.header_wrap
 		header.header
-			.socials
-				a.socials_link(href='#')
-					svg.socials_icon
-						use(xlink:href='./assets/img/sprites/sprite.svg#vk')
-					| vkontakte
-				a.socials_link(href='#')
-					svg.socials_icon
-						use(xlink:href='./assets/img/sprites/sprite.svg#github')
-					| Github 
-				a.socials_link(href='#')
-					svg.socials_icon
-						use(xlink:href='./assets/img/sprites/sprite.svg#in')
-					| Instagramm
+			include ../common/socials
 			a.menuButton
 				span
-		.blockUser
+		
+		.blockUser_info
 			.blockUser_photo
-				img(src='./assets/img/photo.jpg')
+				img(src='./assets/img/me.jpg')
 			h3.blockUser_title Олег Унгер
 			p.blockUser_text Личный сайт веб разработчика
 		a.scrollDown(href='#content')
 			svg.scrollDown_icon
-				use(xlink:href='./assets/img/sprites/sprite.svg#arrow_down')
+				use(xlink:href='./assets/img/sprite/sprite.svg#arrow_down')
 	

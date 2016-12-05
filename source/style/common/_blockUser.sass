@@ -1,0 +1,69 @@
+.blockUser
+    width: 380px
+    min-width: 320px
+    min-height: 395px
+    padding-top: 40px
+    margin: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    background-color: rgba(28, 31, 41, .5)
+    &_info
+        min-width: 235px
+        min-height: 220px
+        color: #fff
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+    &_photo
+        width: 141px
+        height: 141px
+        margin-bottom: 20px
+        border-radius: 50%
+        overflow: hidden
+        position: relative
+        img
+            width: 100%
+            height:auto
+    &_title
+        font-famyly: 'RobotoMedium', sans-serif
+    &_text
+        font: 16px/24px 'RobotoRegular',sans-serif
+        margin: 0
+    &_nav
+        width: 100%
+    .nav
+        &_list
+            width: 100%
+            display: flex
+        &_item
+            flex-grow: 1
+            text-align: center
+            
+            &:last-child
+                .nav_link
+                    box-shadow: none   
+        &_link
+            color: #fff
+            display: block
+            font: 16px/45px 'RobotoMedium', sans-serif
+            background-color: rgba(0, 76, 209, .85)
+            box-shadow: inset -2px 0 0 rgba(222, 227, 231, .5)
+            &:hover
+                background-color: $darkMain-color
+            
+
+
+
+
+// // padding-top: 33px
+    // // margin: auto
+    // // margin-top: 180px
+    // 
+    //     img
+    //         position: absolute
+    //         left: -90px
+    //         width: 250px
+    //         height: auto

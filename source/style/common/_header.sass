@@ -7,7 +7,7 @@
     align-items: center
     padding-bottom: 75px
     position: relative
-    
+    justify-content: space-between
 .headerSection
     padding-bottom: 185px
     background-image: url('../img/bg.jpg')
@@ -15,30 +15,12 @@
     background-position: 50% 75%
     background-size: 3600px 2400px
     
-
 .header
     padding: 30px
     width: 100%
     display: flex
     justify-content: space-between
     
-.socials
-    font-size: 0
-    max-width: 150px
-    &_link
-        @include inline-middle
-        @include size (30px 25px)
-        margin-right: 25px
-        &:hover
-            .socials_icon
-                fill: $main-color
-        &:last-child
-            margin-right: 0
-    &_icon
-        fill: #fff
-        @include size (30px 25px)
-        transition: all ease-in-out .1s
-
 .menuButton
     position: relative
     width: 40px
@@ -76,34 +58,7 @@
         span::after
             transform:rotate(-45deg)
 
-.blockUser
-    min-width: 235px
-    padding-top: 33px
-    margin: auto
-    margin-top: 180px
-    color: #fff
-    display: flex
-    flex-direction: column
-    align-items: center
-    &_photo
-        width: 141px
-        height: 141px
-        border-radius: 50%
-        overflow: hidden
-        margin-bottom: 20px
-        position: relative
-        img
-            position: absolute
-            left: -90px
-            width: 250px
-            height: auto
-            
-    &_title
-        font: 35px/41px 'RobotoMedium', sans-serif
-        margin: 0
-    &_text
-        font: 16px/24px 'RobotoRegular',sans-serif
-        margin: 0
+
 
 .scrollDown
     text-align: center
@@ -114,6 +69,9 @@
         @include size(26px 16px)
         fill: #fff
         fill-opacity: .7
+        transition: all ease-in-out .1s
+        &:hover
+            fill-opacity: 1
 
 
                
