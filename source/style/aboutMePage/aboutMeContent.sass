@@ -1,28 +1,26 @@
 .aboutMePage
-    min-height: 650px
+    min-height: 65rem
     width: 100%
     
     .mainTitle
         float: left
-        padding: 26px 0
-        margin-top: -40px
-        margin-bottom: 25px 
+        margin-bottom: 3rem 
     .content
         &_wrapper
             @include size(100%)
             display: flex
             flex-direction: row
-            flex-wrap: wrap 
+            flex-wrap: wrap
         &-left
-            padding: 20px 20px 25px
+            // padding: 2rem 3rem 2.5rem
             background-color:  #f2f0e8  
         &-right
-            padding: 10px 40px 25px 40px
+            // padding: 1rem 3rem 2.5rem
             background-color: #f4f5f0
             .content_title
-                margin-bottom: 35px
+                margin-bottom: 3.5rem
         &_top
-            top: -170px
+            top: -17rem
             .triangle
                 &-left
                     fill: #f2f0e8
@@ -31,18 +29,21 @@
         &_item
             width: 50%
             display: flex
+            padding: 1rem 3rem
             flex-direction: column
             align-items: center
+            justify-content: centr
             position: relative
             overflow: hidden
+
         &_text
             text-align: left    
         
 .introduce
     @include text-truncate
-    max-width: 440px
+    max-width: 44rem
     &_photo
-        @include size(443px 390px)
+        @include size(44.3rem 39rem)
         margin-bottom: 30px
         background: white
         overflow: hidden

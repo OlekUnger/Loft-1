@@ -1,8 +1,8 @@
 .blockUser
-    width: 380px
-    min-width: 320px
-    min-height: 395px
-    padding-top: 40px
+    width: 38rem
+    min-width: 32rem
+    min-height: 39.5rem
+    padding-top: 4rem
     margin: auto
     display: flex
     flex-direction: column
@@ -10,17 +10,16 @@
     justify-content: space-between
     background-color: rgba(28, 31, 41, .5)
     &_info
-        min-width: 235px
-        min-height: 220px
+        min-width: 23.5rem
+        min-height: 22rem
         color: #fff
         display: flex
         flex-direction: column
         align-items: center
         justify-content: space-between
     &_photo
-        width: 141px
-        height: 141px
-        margin-bottom: 20px
+        @include size(14.1rem)
+        margin-bottom: 2rem
         border-radius: 50%
         overflow: hidden
         position: relative
@@ -30,7 +29,7 @@
     &_title
         font-famyly: 'RobotoMedium', sans-serif
     &_text
-        font: 16px/24px 'RobotoRegular',sans-serif
+        font: 1.6rem/2.4rem'RobotoRegular', sans-serif
         margin: 0
     &_nav
         width: 100%
@@ -48,7 +47,7 @@
         &_link
             color: #fff
             display: block
-            font: 16px/45px 'RobotoMedium', sans-serif
+            font: 1.6rem/4.5rem 'RobotoMedium', sans-serif
             background-color: rgba(0, 76, 209, .85)
             box-shadow: inset -2px 0 0 rgba(222, 227, 231, .5)
             &:hover

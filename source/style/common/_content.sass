@@ -1,15 +1,15 @@
 .content
     position: relative
     width: 100%
-    min-height: 650px
-    margin-top: -185px
+    min-height: 65rem
+    margin-top: -18.5rem
     &_wrapper
         @include size(100%)
         display: flex
         flex-direction: row
     &_text
         color: $dark
-        margin: 10px 0
+        margin: 1rem 0
     &_title-markedDark
         display: block
         text-align: center
@@ -23,14 +23,14 @@
         color: $dark
         &-markedDark,
         &-markedLight
-            padding-bottom: 16px
-            margin-bottom: 15px
+            padding-bottom: 1.6rem
+            margin-bottom: 1.5rem
             &::after
                 @include pseudo
-                @include size(90px 3px)
+                @include size(90px .3rem)
                 bottom: 0
                 left: 50%
-                margin-left: -45px
+                margin-left: -4.5rem
         &-markedDark        
             color: $dark
             &::after

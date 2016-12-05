@@ -4,54 +4,70 @@ $darkMain-color: #083c96;
 
 
 @mixin inline-middle {
-    display:inline-block;
-    vertical-align: middle;
+		display:inline-block;
+		vertical-align: middle;
 }
 @mixin inline-top {
-    display:inline-block;
-    vertical-align: top;
+		display:inline-block;
+		vertical-align: top;
 }
 
 @mixin clearfix {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
+		&:before,
+		&:after {
+				content: "";
+				display: table;
+		}
 
-    &:after {
-        clear: both;
-    }
+		&:after {
+				clear: both;
+		}
 }
 
 @mixin pseudo {
-    content: "";
-    position: absolute
+		content: "";
+		position: absolute
 }
 
 @mixin size($value) {
-  $width: nth($value, 1);
-  $height: $width;
+	$width: nth($value, 1);
+	$height: $width;
 
-  @if length($value) > 1 {
-    $height: nth($value, 2);
-  }
+	@if length($value) > 1 {
+		$height: nth($value, 2);
+	}
 
-  @if is-size($height) {
-    height: $height;
-  } @else {
-    @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
-  }
+	@if is-size($height) {
+		height: $height;
+	} @else {
+		@warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+	}
 
-  @if is-size($width) {
-    width: $width;
-  } @else {
-    @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
-  }
+	@if is-size($width) {
+		width: $width;
+	} @else {
+		@warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+	}
 }
 
 @mixin text-truncate{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: no-wrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: no-wrap;
 }
+
+@mixin desktop
+	@media (max-width: 1200px)
+		@content
+
+@mixin laptop
+	@media (max-width: 1200px)
+		@content
+
+@mixin tablets
+	@media (max-width: 1200px)
+		@content
+
+@mixin phones
+	@media (max-width: 1200px)
+		@content

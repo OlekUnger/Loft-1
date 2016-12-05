@@ -1,30 +1,30 @@
 .header_wrap
-    min-height: 650px
+    min-height: 65rem
     width: 100%
     height: 100vh
     display: flex
     flex-direction: column
     align-items: center
-    padding-bottom: 75px
+    padding-bottom: 7.5rem
     position: relative
     justify-content: space-between
 .headerSection
-    padding-bottom: 185px
+    padding-bottom: 18.5rem
     background-image: url('../img/bg.jpg')
     background-repeat: no-repeat
     background-position: 50% 75%
-    background-size: 3600px 2400px
+    background-size: 360rem 240rem
     
 .header
-    padding: 30px
+    padding: 3rem
     width: 100%
     display: flex
     justify-content: space-between
     
 .menuButton
     position: relative
-    width: 40px
-    height: 35px
+    width: 4rem
+    height: 3.5rem
     cursor: pointer
     z-index: 5
     
@@ -33,17 +33,17 @@
     span::after
         position: absolute
         content: ""
-        width: 40px
-        height: 5px
-        border-radius: 3px
+        width: 4rem
+        height: .5rem
+        border-radius: .3rem
         background-color: #FFF
         transition: all 500ms ease-in-out
     span
-        top: 15px    
+        top: 1.5rem   
         &::before
-            top: -15px
+            top: -1.5rem
         &::after
-            bottom: -15px
+            bottom: -1.5rem
     &.active
         span
             background: transparent
@@ -64,9 +64,9 @@
     text-align: center
     display: block
     z-index: 2
-    @include size(26px 16px)
+    @include size(2.6rem 1.6rem)
     &_icon
-        @include size(26px 16px)
+        @include size(2.6rem 1.6rem)
         fill: #fff
         fill-opacity: .7
         transition: all ease-in-out .1s

@@ -1,28 +1,28 @@
 .autorization
-    min-height: 650px
+    min-height: 6rem
     width: 100%
     height: 100vh
     display: flex
     flex-direction: column
     align-items: center
-    padding: 30px 30px 0
+    padding: 3rem 3rem 0
     position: relative
     justify-content: space-between
     background-image: url('../img/bg.jpg')
-    background-position: 50% 55%
-    background-size: 3600px 2400px
+    background-position: 50% 66%
+    background-size: 360rem 240rem
     .pageFooter-bottom
-        padding: 40px 0
+        padding: 4rem 0
         background: transparent
     .content_title
         color: #fff
     .autorize
         &_btn
-            width: 180px
+            width: 18rem
             text-align: center
             align-self: flex-end
             color: #fff
-            font: 16px/45px 'RobotoMedium', sans-serif
+            font: 1.6rem/4.5rem 'RobotoMedium', sans-serif
             box-shadow: inset 0 0 1px 1px #fff
             cursor: pointer
             outline: 0
@@ -32,7 +32,7 @@
             &:hover
                 box-shadow: none
 .autorizeForm
-    padding: 0px 20px
+    padding: 0 2rem
     width: 100%
     display: flex
     flex-direction: column
@@ -40,41 +40,41 @@
     justify-content: space-between
     .inputWrap
         display: flex
-        height: 45px
-        margin-bottom: 20px   
+        height: 4.5rem
+        margin-bottom: 2rem  
     .formLabel
         display: flex
         align-items: center
         justify-content: center
-        @include size (45px)
+        @include size (4.5rem)
         background-color: #f0efe9    
     input[type="text"],
     input[type="password"]
-        width: 295px
-        font: 16px/19px 'Roboto', sans-serif
+        width: 29.5rem
+        font: 1.6rem/1.9rem 'RobotoRegular', sans-serif
         color: #373e42
-        padding: 12px
+        padding: 1.2rem
         outline: none
         border: none
    
     .formIcon
-        @include size(20px)
+        @include size(2rem)
         fill: #c4cbcd
     .checkIcon
-        @include size(12px 9px)
+        @include size(1.2rem .9rem)
         fill: #fff
     .checkLabel
-        padding-left: 30px
+        padding-left: 3rem
         position: relative
         color: #fff
-        margin-bottom: 10px
+        margin-bottom: 1rem
     .checkboxIndicator
-        @include size(20px)
+        @include size(2rem)
         position: absolute
         top: 0
         left: 0
         background: #fff
-        border-radius: 5px
+        border-radius: .5rem
         display: flex
         align-items: center
         justify-content: center
@@ -95,21 +95,22 @@
         legend
             font-weight: 700
             width: 100%
-            margin-bottom: 10px
+            margin-bottom: 1rem
+
     .radioWrap
         width: 100%
         display: flex
         justify-content: center       
     input[type="radio"]+.radioLabel
         position: relative
-        margin-right: 40px
-        padding-left: 30px
+        margin-right: 4rem
+        padding-left: 3rem
         &:last-child
             margin-right: 0
         &::before 
             @include pseudo
             border-radius: 50%
-            @include size(20px)
+            @include size(2rem)
             background-color: #fff
             border: 0
             top: 0
@@ -117,8 +118,8 @@
     input[type="radio"]:checked +
         .radioLabel
             &::before
-                @include size(8px)
-                border: 6px solid #fff
+                @include size(.8rem)
+                border: .6rem solid #fff
                 background-color: $main-color
             
 .wrap
