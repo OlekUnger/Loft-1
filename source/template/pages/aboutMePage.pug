@@ -8,30 +8,32 @@ block content
 	section#content.content.aboutMePage
 		include ../common/triangles
 		.content_wrapper
-			.content_item.content-left
-				h2.content_title.mainTitle Обо мне
-				article.introduce
-					.introduce_photo
-						img(src='./assets/img/about.jpg')
-					.content_text
-						h3.content_title.content_title-markedDark Кто я
-						p.content_text
-							| Я веб разработчик из Санкт-Петербурга.
-							| Я занимаюсь разработкой современных сайтов и приложений.
-							| Мне нравится делать интересные и современные проекты.
-						p.content_text
-							| Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-							| Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+			.content_item
+				.content_item-left
+					h2.content_title.mainTitle Обо мне
+					article.introduce
+						.introduce_photo
+							img(src='./assets/img/about.jpg')
+						.content_textBlock
+							h3.content_title.content_title-markedDark Кто я
+							p.content_text
+								| Я веб разработчик из Санкт-Петербурга.
+								| Я занимаюсь разработкой современных сайтов и приложений.
+								| Мне нравится делать интересные и современные проекты.
+							p.content_text
+								| Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+								| Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 							
-			.content_item.content-right
-				.content_text
-					h3.content_title.content_title-markedDark
-						| Чем я могу быть
-						br
-						|  вам полезен
-					p.content_text
-						| Больше всего меня привлекет Frontend разработка,
-						| но я также знаком и могу решать не сложные задачи на Backend.
-						| Но давайте по порядку.
-				include ../common/blockSkills
+			.content_item
+				.content_item-right
+					.content_textBlock
+						h3.content_title.content_title-markedDark
+							| Чем я могу быть
+							br
+							|  вам полезен
+						p.content_text
+							| Больше всего меня привлекет Frontend разработка,
+							| но я также знаком и могу решать не сложные задачи на Backend.
+							| Но давайте по порядку.
+					include ../common/blockSkills
 	include ../common/map
