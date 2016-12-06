@@ -1,52 +1,91 @@
 .aboutMePage
-    min-height: 65rem
+    min-height: 650px
     width: 100%
     
     .mainTitle
-        float: left
-        margin-bottom: 3rem 
+        margin-bottom: 5rem
+        margin-top: -5px
+        @include laptop
+            margin-bottom: 4rem
     .content
         &_wrapper
             @include size(100%)
             display: flex
             flex-direction: row
-            flex-wrap: wrap
-        &-left
-            // padding: 2rem 3rem 2.5rem
-            background-color:  #f2f0e8  
-        &-right
-            // padding: 1rem 3rem 2.5rem
-            background-color: #f4f5f0
-            .content_title
-                margin-bottom: 3.5rem
+            @include desktop
+                flex-direction: column
+        &_item
+            width: 50%
+            display: flex
+            flex-direction: column
+            align-items: center
+            position: relative
+            @include desktop
+                padding: 4rem 0 3rem
+            &:first-child
+               background-color:  #f2f0e8
+            &:last-child
+                background-color: #f4f5f0 
+            @include desktop
+                width: 100%
+            &-left
+               
+            &-right 
+                align-items: left
+                padding-left: 4rem
+                @include desktop
+                    align-items: center
+                    padding-left: 0
+                .content_title
+                    margin-bottom: 3.5rem
+                    @include laptop
+                        margin-bottom: 1.5rem
+                .content_textBlock
+                    @include desktop
+                        max-width: 555px
+                        padding: 0 4rem
+                    @include laptop
+                        padding: 0 1rem
+                    
+                        
+                .content_text
+                    // padding-left: 30px
+        &_textBlock
+            width: 100%
+            @include tablets
+                padding: 0 10px
+        &_text    
+            text-align: left     
         &_top
-            top: -17rem
+            top: -15vh
             .triangle
                 &-left
                     fill: #f2f0e8
                 &-right
                     fill: #f4f5f0
-        &_item
-            width: 50%
-            display: flex
-            padding: 1rem 3rem
-            flex-direction: column
-            align-items: center
-            justify-content: centr
-            position: relative
-            overflow: hidden
-
-        &_text
-            text-align: left    
-        
+                    @include desktop
+                        fill: #f2f0e8
+              
 .introduce
     @include text-truncate
     max-width: 44rem
+    @include desktop
+        max-width: 47rem
     &_photo
-        @include size(44.3rem 39rem)
-        margin-bottom: 30px
+        @include size(100% 390px)
+        margin-bottom: 3rem
         background: white
         overflow: hidden
+        @include desktop
+            height: 41.5rem
+        @include tablets
+            width: 100%
+            height: 283px
+        @include phones
+           width: 100%
+           
+        img
+            @include size(100% auto)
 
 
 @import "_map"

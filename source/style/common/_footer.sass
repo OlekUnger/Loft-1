@@ -6,10 +6,16 @@
     &_content
         background-color: rgba(28, 31, 41, .85)
         min-height: 14.7rem
-        padding: 2.5rem 0
         display: flex
         justify-content: space-between
-
+        flex-wrap: wrap
+        padding: 2.5rem 3rem
+        @include laptop
+            padding-top: 0
+            padding-bottom: 0
+        @include tablets
+            flex-direction: column
+            padding: 0 10px
     &_text
         color: #fff
         font: 1.6rem/2.4rem 'RobotoLight',sans-serif
@@ -18,12 +24,47 @@
         text-align: center
         padding: .6rem 0
     &_contentBlock
-        padding: 0px 3rem
-        border-right: 1px solid rgba(255,255,255, 0.2)
-        width: 33%
-        &:last-child
-            border-right: none
-            min-width: 28rem
+        padding: 0 3rem 0 3rem
+        border-left: 1px solid rgba(255,255,255, 0.2)
+        @include laptop
+            border-left: none
+            padding: 1.5rem 0 1.5rem 0
+        @include tablets
+            width: 100%!important
+            text-align: center!important
+            border-bottom: 1px solid rgba(255,255,255, 0.2)
+              
+        &:nth-child(1),
+        &:nth-child(2)
+            width: 40%   
+        &:nth-child(1)
+            border-left: none
+            padding-left: 0
+            text-align: center
+            @include laptop
+                width: 100%
+                border-bottom: 1px solid rgba(255,255,255, 0.2)
+        &:nth-child(2)
+            @include laptop
+                width: 60%
+            @include tablets
+                width: 100%
+                text-align: center           
+        &:nth-child(3)
+            padding-right: 0
+            width: 20%
+            @include laptop
+                width: 40%
+                text-align: right
+            @include tablets
+                border-bottom: 0
+                
+        
+        
+                
+
+
+
             
     .nav
         margin-bottom: 4rem

@@ -1,34 +1,48 @@
 .blockSkills
-    width: 100%
+    max-width: 560px
     display: flex
     flex-direction: column
     justify-content: flex-start
-    margin-top: 4rem
+    margin-top: 3.5rem
     &_row:not(:last-child)
-        margin-bottom: 3rem
+        margin-bottom: 2.5rem
+    @include desktop
+        align-items: center
+    @include laptop
+        margin-top: 15px
     &_title
         text-align: left
-        margin-bottom: 1rem
+        margin-bottom: 1.5rem
         color: $dark
+        @include desktop
+            text-align: center
     .skillCounter
         display: flex
         justify-content: flex-start
         flex-wrap: wrap
-        &_item
-            @include size(11rem)
-            position: relative
-            font: 12px/15px 'RobotoMedium', sans-serif
-            text-align: center
-            color: #243994 
-            margin: 0 3.2rem 1rem 0
+        @include laptop
             display: flex
             align-items: center
             justify-content: center
+        &_item
+            @include size(110px)
+            position: relative
+            font: 1.2rem/1.5rem 'RobotoMedium', sans-serif
+            text-align: center
+            color: #243994 
+            margin: 0 3.5rem 3rem 0
+            display: flex
+            align-items: center
+            justify-content: space-around
+            
             &:last-child
-                margin-right: 0
-
+                @media (min-width: 992px)
+                    margin-right: 0
+            @include laptop
+                margin: 0 1.5rem 3rem  
+        
     .cCircle
-        @include size(11rem)
+        @include size(110px)
         position: absolute
         top: 0
         left: 0
