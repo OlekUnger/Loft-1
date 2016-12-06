@@ -56,18 +56,26 @@ $darkMain-color: #083c96;
 		white-space: no-wrap;
 }
 
-@mixin desktop
-	@media (max-width: 1200px)
+@mixin desktop {
+	@media (max-width: 992px) {
 		@content
+	}
+}
 
-@mixin laptop
-	@media (max-width: 1200px)
+@mixin laptop {
+	@media (max-width: 798px) {
 		@content
+	}
+}
 
-@mixin tablets
-	@media (max-width: 1200px)
+@mixin tablets {
+	@media (max-width: 480px) {
 		@content
+	}
+}
 
-@mixin phones
-	@media (max-width: 1200px)
+@mixin phones {
+	@media (max-width: 320px) {
 		@content
+	}
+}
