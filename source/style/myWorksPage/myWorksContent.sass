@@ -10,9 +10,14 @@
             padding: 4.7rem 0
             text-align: center
             background-color: rgba(17, 17, 33, .85)
+            @include w992
+                padding: 3rem 0
+            @include w768
+                padding: 2.5rem 0
+            
         &_top
             left: 0
-            margin-top: -17rem
+            top: -15vh
             .triangle
                 &-left
                     fill: rgba(17, 17, 33, .85)
@@ -20,8 +25,8 @@
                     fill: rgba(17, 17, 33, .85)
     .mainTitle
         color: #fff
-        padding-bottom: 2rem
         @include inline-top
+        padding-bottom: 2rem
         &::after
             @include pseudo
             @include size(9rem .3rem)

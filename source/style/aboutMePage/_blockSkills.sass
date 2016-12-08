@@ -6,21 +6,21 @@
     margin-top: 3.5rem
     &_row:not(:last-child)
         margin-bottom: 2.5rem
-    @include desktop
+    @include w992
         align-items: center
-    @include laptop
+    @include w768
         margin-top: 15px
     &_title
         text-align: left
         margin-bottom: 1.5rem
         color: $dark
-        @include desktop
+        @include w992
             text-align: center
     .skillCounter
         display: flex
         justify-content: flex-start
         flex-wrap: wrap
-        @include laptop
+        @include w992
             display: flex
             align-items: center
             justify-content: center
@@ -38,7 +38,7 @@
             &:last-child
                 @media (min-width: 992px)
                     margin-right: 0
-            @include laptop
+            @include w992
                 margin: 0 1.5rem 3rem  
         
     .cCircle

@@ -4,55 +4,69 @@
     
     .mainTitle
         margin-bottom: 5rem
-        margin-top: -5px
-        @include laptop
+        margin-top: -.5rem
+        @include w768
             margin-bottom: 4rem
+        @include min1800
+            @include inline-top
+            margin: -1.5rem 9rem 0 0
+            
     .content
         &_wrapper
             @include size(100%)
             display: flex
             flex-direction: row
-            @include desktop
+            @include w992
                 flex-direction: column
         &_item
             width: 50%
             display: flex
-            flex-direction: column
-            align-items: center
-            position: relative
-            @include desktop
+            @include w1800
+                justify-content: center
+            @include w992
                 padding: 4rem 0 3rem
+                width: 100%
             &:first-child
                background-color:  #f2f0e8
             &:last-child
                 background-color: #f4f5f0 
-            @include desktop
-                width: 100%
-            &-left
-               
-            &-right 
-                align-items: left
                 padding-left: 4rem
-                @include desktop
+                padding-right: 1rem
+                @include min1800
+                    padding: 1rem 4rem
+                @include w992
+                    padding: 0
+            &-left
+                @include min1800
+                    align-self: flex-start
+                    display: flex
+                    flex-direction: row!important
+                    justify-content: flex-end
+                    flex-wrap: no-wrap
+                    align-items: flex-start
+                    width: 100%
+                    padding: 2rem 2rem
+            &-right
+                display: flex
+                flex-direction: column
+                align-items: left
+                @include min1800
+                    max-width: 90rem
+                @include w992
                     align-items: center
-                    padding-left: 0
                 .content_title
                     margin-bottom: 3.5rem
-                    @include laptop
+                    @include w768
                         margin-bottom: 1.5rem
                 .content_textBlock
-                    @include desktop
-                        max-width: 555px
-                        padding: 0 4rem
-                    @include laptop
-                        padding: 0 1rem
-                    
+                    @include w992
+                        max-width: 475px
                         
+
                 .content_text
                     // padding-left: 30px
         &_textBlock
-            width: 100%
-            @include tablets
+            @include w480
                 padding: 0 10px
         &_text    
             text-align: left     
@@ -63,25 +77,29 @@
                     fill: #f2f0e8
                 &-right
                     fill: #f4f5f0
-                    @include desktop
+                    @include w992
                         fill: #f2f0e8
               
 .introduce
     @include text-truncate
-    max-width: 44rem
-    @include desktop
+    width: 44rem
+    @include min1800
+        align-self: flex-end
+    @include w992
         max-width: 47rem
+    @include w480
+        width: 100%
     &_photo
         @include size(100% 390px)
         margin-bottom: 3rem
         background: white
         overflow: hidden
-        @include desktop
+        @include w992
             height: 41.5rem
-        @include tablets
+        @include w480
             width: 100%
             height: 283px
-        @include phones
+        @include w320
            width: 100%
            
         img

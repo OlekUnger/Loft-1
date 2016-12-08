@@ -10,13 +10,13 @@
     background-image: url('../img/bg.jpg')
     background-position: 50% 66%
     background-size: 360rem 240rem
-    @include phones
-        padding: 1.1428rem 1.1428rem 0
+    @include w480
+        padding: 10px 10px 0
     .pageFooter-bottom
         padding: 4rem 0
         background: transparent
-        @include phones
-            padding: 0.914rem 4.34rem
+        @include w480
+            padding: 8px 8px
     .content_title
         color: #fff
     .autorize
@@ -34,7 +34,10 @@
             transition: all ease-in-out .1s
             &:hover
                 box-shadow: none
-            @include tablets
+                background-color: $main-color
+            &:active
+                background-color: $darkMain-color
+            @include w480
                 align-self: center
 .autorizeForm
     padding: 0 2rem
@@ -46,21 +49,29 @@
     .inputWrap
         display: flex
         height: 4.5rem
-        margin-bottom: 2rem  
+        margin-bottom: 2rem
+        width: 100%  
     .formLabel
+        @include size (4.5rem)
         display: flex
         align-items: center
         justify-content: center
-        @include size (4.5rem)
-        background-color: #f0efe9    
+        background-color: #f0efe9 
+        order: 1   
     input[type="text"],
     input[type="password"]
-        width: 29.5rem
+        display: block
+        width: 100%
         font: 1.6rem/1.9rem 'RobotoRegular', sans-serif
         color: #373e42
         padding: 1.2rem
         outline: none
         border: none
+        order: 2
+        &:focus~
+            .formLabel
+                .formIcon
+                    fill: $main-color
    
     .formIcon
         @include size(2rem)
@@ -74,15 +85,19 @@
         color: #fff
         margin-bottom: 1rem
     .checkboxIndicator
-        @include size(2rem)
+        @include size(20px)
         position: absolute
         top: 0
         left: 0
         background: #fff
-        border-radius: .5rem
+        border-radius: 3px
         display: flex
         align-items: center
         justify-content: center
+        .checkIcon
+            @include size(12px 9px)
+            fill: #fff
+            display: none
 
     input[type="checkbox"]
         display: none
@@ -90,6 +105,8 @@
     input[type="checkbox"]:checked+
         .checkboxIndicator
             background-color: $main-color
+            svg
+                display: block
         
     fieldset
         width: 100%

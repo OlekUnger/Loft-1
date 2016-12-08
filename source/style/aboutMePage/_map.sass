@@ -1,27 +1,29 @@
-.map_wrap
-    display: flex
-    justify-content: center
-    align-items: center
-    min-height: 650px
-    height: 100vh
-    @include phones
-        justify-content: center
-        align-items: flex-start
+  
 .map_section
-    padding-bottom: 18.5rem
+    height: 100vh
     background: #eae8e2 url('../img/map.png') no-repeat
     background-size: cover
-    
+    display: flex
+    flex-direction-column
+    flex-direction: row-reverse
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    @include w320
+        justify-content: center
+        align-items: flex-start
 .contacts
+    align-self: center
     padding: 3rem 2rem 0
     max-width: 58rem
     background-color: rgba(255,255,255, .7)
-    @include laptop
+    @include w768
         width: 35rem
-    @include phones
+    @include w320
         width: 100%
         padding-left: 10px
         padding-right: 10px
+        align-self: flex-end
         
     .nav
         &_list
@@ -30,7 +32,7 @@
             justify-content: flex-start
             width: 100%
             margin-top: 3.8rem
-            @include laptop
+            @include w768
                 flex-directon: column
         &_item
             margin-bottom: 3rem

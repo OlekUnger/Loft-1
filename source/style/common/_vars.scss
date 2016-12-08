@@ -56,25 +56,43 @@ $darkMain-color: #083c96;
 		white-space: no-wrap;
 }
 
-@mixin desktop {
+@mixin min1800 {
+	@media (min-width: 1800px) {
+		@content
+	}
+}
+
+@mixin w1800 {
+	@media (max-width: 1800px) {
+		@content
+	}
+}
+
+@mixin w1200 {
+	@media (max-width: 1200px) {
+		@content
+	}
+}
+
+@mixin w992 {
 	@media (max-width: 992px) {
 		@content
 	}
 }
 
-@mixin laptop {
-	@media (max-width: 798px) {
+@mixin w768 {
+	@media (max-width: 768px) {
 		@content
 	}
 }
 
-@mixin tablets {
+@mixin w480 {
 	@media (max-width: 480px) {
 		@content
 	}
 }
 
-@mixin phones {
+@mixin w320 {
 	@media (max-width: 320px) {
 		@content
 	}

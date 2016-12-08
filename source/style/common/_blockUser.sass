@@ -1,14 +1,16 @@
 .blockUser
     width: 380px
     min-height: 395px
-    padding-top: 40px
+    padding-top: 4rem
     margin: auto
     display: flex
     flex-direction: column
     align-items: center
     justify-content: space-between
     background-color: rgba(28, 31, 41, .5)
-    @include phones
+    @include w768
+        width: 350px
+    @include w480
         width: 300px
     &_info
         min-width: 235px
@@ -29,7 +31,7 @@
             height:auto
     &_title
         font-famyly: 'RobotoMedium', sans-serif
-        @include phones
+        @include w320
             font-size: 21px
             line-height: 28px
 
@@ -59,16 +61,3 @@
             &:hover
                 background-color: $darkMain-color
             
-
-
-
-
-// // padding-top: 33px
-    // // margin: auto
-    // // margin-top: 180px
-    // 
-    //     img
-    //         position: absolute
-    //         left: -90px
-    //         width: 250px
-    //         height: auto

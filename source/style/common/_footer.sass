@@ -1,8 +1,9 @@
 
 .pageFooter
     width: 100%
-    margin-top: -18.3rem
     position: relative
+    align-self: flex-end
+    flex-grow: 1
     &_content
         background-color: rgba(28, 31, 41, .85)
         min-height: 14.7rem
@@ -10,10 +11,10 @@
         justify-content: space-between
         flex-wrap: wrap
         padding: 2.5rem 3rem
-        @include laptop
+        @include w768
             padding-top: 0
             padding-bottom: 0
-        @include tablets
+        @include w480
             flex-direction: column
             padding: 0 10px
     &_text
@@ -22,53 +23,51 @@
     &-bottom
         background-color: rgba(8, 60, 150, .85)
         text-align: center
-        padding: .6rem 0
+        padding: .6rem 10px
     &_contentBlock
         padding: 0 3rem 0 3rem
         border-left: 1px solid rgba(255,255,255, 0.2)
-        @include laptop
+        width: 33%
+        @include w768
             border-left: none
             padding: 1.5rem 0 1.5rem 0
-        @include tablets
+        @include w480
             width: 100%!important
             text-align: center!important
-            border-bottom: 1px solid rgba(255,255,255, 0.2)
-              
+            border-bottom: 1px solid rgba(255,255,255, 0.2)      
         &:nth-child(1),
         &:nth-child(2)
-            width: 40%   
+            @include w992
+                width: 40%   
         &:nth-child(1)
             border-left: none
             padding-left: 0
             text-align: center
-            @include laptop
+            @include w768
                 width: 100%
                 border-bottom: 1px solid rgba(255,255,255, 0.2)
         &:nth-child(2)
-            @include laptop
+            @include w768
                 width: 60%
-            @include tablets
-                width: 100%
-                text-align: center           
+            @include w480
+                width: 100%         
         &:nth-child(3)
             padding-right: 0
-            width: 20%
-            @include laptop
+            @include w992
+                width: 20%
+            @include w768
                 width: 40%
                 text-align: right
-            @include tablets
                 border-bottom: 0
-                
-        
-        
-                
-
-
-
-            
+                text-align: center
+            @include w480
+                width: 100%      
+                         
     .nav
         margin-bottom: 4rem
         max-width: 46rem
+        @include w768
+            margin-bottom: 2rem
         &_list
             margin: 0 auto
             list-style: none
@@ -92,8 +91,11 @@
                 text-decoration: underline
             &.active
                 text-decoration: underline
-    .socials_icon
-        fill-opacity: .5
-    // .ft-wrap
-    //     max-width: 460px
+
+    .socials
+        @include w480
+            margin: 0 auto
+            &_icon
+                fill-opacity: .5
+    
     

@@ -6,20 +6,32 @@
         position: relative
         background-color: #e3e2de
         display: flex
-
+        
     &_item
         width: 100%
         display: flex
-        padding: 0px 5rem
+        padding: 0px 4rem
+        @include w992
+            flex-direction: column
+            padding: 0 3rem
         &-left,
         &-right
             @include size(50% 100%)
             display: flex
             justify-content: center
             align-items: center
+            @include w992
+                width: 100%
+        &-left
+            @include w992
+                order: 2
+        &-right
+            @include w992
+                order: 1
+                height: 40vh
     &_controls
         position: absolute
-        height: 1.1rem
+        height: 11px
         width: 100%
         margin: 0 auto
         text-align: center
@@ -29,10 +41,10 @@
         justify-content: center
         align-items: center
         label
-            width: 1.1rem
-            height: 1.1rem
-            margin: 0 .5rem
-            border: .2rem solid $main-color
+            width: 11px
+            height: 11px
+            margin: 0 10px
+            border: 2px solid $main-color
             background-color: #fff
             border-radius: 50%
             cursor: pointer
@@ -45,6 +57,8 @@
         top: 50%
         left: 0
         padding: 0px 2.5rem
+        @include w320
+            padding: 0 10px
     .navIcon
         @include size(2.6rem 1.6rem)
         transition: all ease-in-out .1s
@@ -72,6 +86,10 @@ input[type=radio]
     width: 30rem
     text-align: left
     margin: auto
+    padding-top: 1rem
+    @include w992
+        width: 100%
+        text-align: center
     &_text
         font: 16px/24px 'RobotoMedium', sans-serif
         text-transform: uppercase
@@ -81,9 +99,15 @@ input[type=radio]
         padding-bottom: 2.6rem
         margin-bottom: 2rem
         text-align: left
+        @include w992
+            text-align: center
         &:after
             margin-left: 0
             left: 0
+            @include w992
+                left: 50%
+                margin-left: -45px
+
     &_linkBtn
         color: #fff 
         display: inline-block
@@ -93,6 +117,10 @@ input[type=radio]
         background-color: $main-color
         margin-top: 5.5rem
         transition: all ease-in-out .1s
+        @include w992
+            margin-top: 3rem
+        @include w320
+            margin-top: 2rem
         &:hover,
         &:active
             background-color: $darkMain-color
