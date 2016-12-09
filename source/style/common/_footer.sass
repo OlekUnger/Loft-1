@@ -11,7 +11,7 @@
         justify-content: space-between
         flex-wrap: wrap
         padding: 2.5rem 3rem
-        @include w768
+        @include w992
             padding-top: 0
             padding-bottom: 0
         @include w480
@@ -28,38 +28,38 @@
         padding: 0 3rem 0 3rem
         border-left: 1px solid rgba(255,255,255, 0.2)
         width: 33%
-        @include w768
+        text-align: left
+        @include w992
             border-left: none
             padding: 1.5rem 0 1.5rem 0
         @include w480
             width: 100%!important
             text-align: center!important
             border-bottom: 1px solid rgba(255,255,255, 0.2)      
-        &:nth-child(1),
-        &:nth-child(2)
-            @include w992
-                width: 40%   
         &:nth-child(1)
             border-left: none
             padding-left: 0
-            text-align: center
-            @include w768
+            @include w1200
+                width: 30%
+            @include w992
                 width: 100%
+                text-align: center
                 border-bottom: 1px solid rgba(255,255,255, 0.2)
         &:nth-child(2)
-            @include w768
-                width: 60%
+            @include w1200
+                width: 45%
+            @include w992
+                width: 70%
             @include w480
                 width: 100%         
         &:nth-child(3)
             padding-right: 0
+            @include w1200
+                width: 25%
             @include w992
-                width: 20%
-            @include w768
-                width: 40%
+                width: 30%
                 text-align: right
                 border-bottom: 0
-                text-align: center
             @include w480
                 width: 100%      
                          
@@ -67,7 +67,7 @@
         margin-bottom: 4rem
         max-width: 46rem
         @include w768
-            margin-bottom: 2rem
+            margin-bottom: 3rem
         &_list
             margin: 0 auto
             list-style: none

@@ -6,17 +6,29 @@
     flex-direction: column
     align-items: center
     padding-bottom: 70px
-    position: relative
+    // position: relative
     justify-content: space-between
     @include w992
         padding-bottom: 50px
 
+.bgvideo
+    position: absolute
+    left: 0
+    top: -200px
+    min-width: 100%
+    min-height: 100%
+    width: auto
+    height: auto
+    z-index: -100
+
 .headerSection
     padding-bottom: 185px
-    background-image: url('../img/bg.jpg')
+    background-image: url('../img/mount.png')
     background-repeat: no-repeat
-    background-position: 50% 75%
-    background-size: 3600px 2400px
+    background-position: 50% 112%
+    background-size: 3600px 700px
+    position: relative
+    overflow: hidden
     
 .header
     padding: 30px
@@ -58,10 +70,10 @@
             top: 0
     &.active
         span::before
-            transform:rotate(45deg)
+            transform: rotate(45deg)
     &.active
         span::after
-            transform:rotate(-45deg)
+            transform: rotate(-45deg)
 
 
 

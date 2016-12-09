@@ -1,21 +1,33 @@
-(function() {
-  'use strict';
-
-  setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
-  }, 1000);
-
-
+(function(){
+	$(".menuButton").click(function(e){
+		e.preventDefault();
+		$(this).toggleClass("active");
+	});
 })();
 
-// $(document).ready(function(){
+(function(){
+	$(".autorize_btn").click(function(e){
+		e.preventDefault();
+		$(".flipContainer").toggleClass("flip")
+	})
+})();
 
-//   $(".menuButton").click(function(e){
-//     e.preventDefault();
-  
-//     $(this).toggleClass('active');
-//     // $(".navMenu").fadeToggle('slow');
-    
-//   });    
 
-// });
+
+// var openMenu = document.querySelector(".menuButton");
+// var	autorizeBtn = document.querySelector(".autorize_btn");
+// var	flipContainer = document.querySelector(".flipContainer");
+
+// 	openMenu.addEventListener('click', function(event){
+//   			event.preventDefault();
+//   			this.classList.toggle('active');
+// 	});
+
+// 	autorizeBtn.addEventListener('click', function(event){
+// 		event.preventDefault();
+// 		flipContainer.classList.toggle('flip');
+// 	});	
+
+
+
+

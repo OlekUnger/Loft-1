@@ -1,10 +1,14 @@
 section.headerSection#header
+	video#bgvideo(autoplay loop muted).bgvideo
+		source(src="assets/img/night.mp4" type="video/mp4")
 	.header_wrap
+		
 		header.header
 			include ../common/socials
 			a.menuButton
 				span
 		
+
 		.blockUser_info
 			.blockUser_photo
 				img(src='./assets/img/me.jpg')
@@ -13,4 +17,4 @@ section.headerSection#header
 		a.scrollDown(href='#content')
 			svg.scrollDown_icon
 				use(xlink:href='./assets/img/sprite/sprite.svg#arrow_down')
-	
+		
