@@ -13,10 +13,10 @@
     &.show
         display: block
     .nav
-        margin-top: 210px
-        
+        margin-top: 21rem
+        include w768
+            margin-top: 15rem
         &_list
-            // display: none
             max-width: 390px
             margin: 0 auto
             list-style: none
@@ -26,12 +26,15 @@
         &_link
             display: block
             position: relative
-            font: 400 63px/75px "Sansus"
-            padding: 30px 20px
+            font: 400 6.3rem/7.5rem "Sansus"
+            padding: 3rem 2rem
             text-transform: uppercase
             text-decoration: none
             color: #fff
             transition: all .3s
+            @include w992
+                font-size: 4.9rem
+                line-height: 6.5rem
             &:hover::after
                 opacity: 1
             &::after

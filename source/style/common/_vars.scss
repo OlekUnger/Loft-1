@@ -4,96 +4,96 @@ $darkMain-color: #083c96;
 
 
 @mixin inline-middle {
-		display:inline-block;
-		vertical-align: middle;
+        display:inline-block;
+        vertical-align: middle;
 }
 @mixin inline-top {
-		display:inline-block;
-		vertical-align: top;
+        display:inline-block;
+        vertical-align: top;
 }
 
 @mixin clearfix {
-		&:before,
-		&:after {
-				content: "";
-				display: table;
-		}
+        &:before,
+        &:after {
+                content: "";
+                display: table;
+        }
 
-		&:after {
-				clear: both;
-		}
+        &:after {
+                clear: both;
+        }
 }
 
 @mixin pseudo {
-		content: "";
-		position: absolute
+        content: "";
+        position: absolute
 }
 
 @mixin size($value) {
-	$width: nth($value, 1);
-	$height: $width;
+    $width: nth($value, 1);
+    $height: $width;
 
-	@if length($value) > 1 {
-		$height: nth($value, 2);
-	}
+    @if length($value) > 1 {
+        $height: nth($value, 2);
+    }
 
-	@if is-size($height) {
-		height: $height;
-	} @else {
-		@warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
-	}
+    @if is-size($height) {
+        height: $height;
+    } @else {
+        @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+    }
 
-	@if is-size($width) {
-		width: $width;
-	} @else {
-		@warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
-	}
+    @if is-size($width) {
+        width: $width;
+    } @else {
+        @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+    }
 }
 
 @mixin text-truncate{
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: no-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: no-wrap;
 }
 
 @mixin min1800 {
-	@media (min-width: 1800px) {
-		@content
-	}
+    @media (min-width: 1800px) {
+        @content
+    }
 }
 
 @mixin w1800 {
-	@media (max-width: 1800px) {
-		@content
-	}
+    @media (max-width: 1800px) {
+        @content
+    }
 }
 
 @mixin w1200 {
-	@media (max-width: 1200px) {
-		@content
-	}
+    @media (max-width: 1200px) {
+        @content
+    }
 }
 
 @mixin w992 {
-	@media (max-width: 992px) {
-		@content
-	}
+    @media (max-width: 992px) {
+        @content
+    }
 }
 
 @mixin w768 {
-	@media (max-width: 768px) {
-		@content
-	}
+    @media (max-width: 768px) {
+        @content
+    }
 }
 
 @mixin w480 {
-	@media (max-width: 480px) {
-		@content
-	}
+    @media (max-width: 480px) {
+        @content
+    }
 }
 
 @mixin w320 {
-	@media (max-width: 320px) {
-		@content
-	}
+    @media (max-width: 320px) {
+        @content
+    }
 }

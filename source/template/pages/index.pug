@@ -1,37 +1,41 @@
 doctype html
 html(lang='en')
-	head
-		meta(charset='UTF-8')
-		meta(http-equiv='X-UA-Compatible', ,='', content='IE=Edge, chrome=1')
-		meta(name='viewport', content='width=device-width')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', ,='', content='IE=Edge, chrome=1')
+        meta(name='viewport', content='width=device-width')
 
-		block title
-			title Autorization
-		
-		link(rel='stylesheet', type='text/css', href='assets/css/app.css')
-		link(rel='stylesheet', type='text/css', href='assets/css/normalise.css')
-	body
-		.container
-			section.autorization
-				//- video#bgvideo(autoplay loop muted).bgvideo
-				//- 	source(src="assets/img/night.mp4" type="video/mp4")
+        block title
+            title Autorization
+        
+        link(rel='stylesheet', type='text/css', href='assets/css/app.css')
+        link(rel='stylesheet', type='text/css', href='assets/css/normalise.css')
+    body
+        .container
+            section.autorization
+                .layer-0
+                    img(src="assets/img/bg-blue.jpg")
+                .layer-1
+                    //- video#bgvideo(autoplay loop muted).bgvideo
+                    //-     source(src="assets/img/night.mp4" type="video/mp4")
+                .layer-2
+                    img(src='./assets/img/mount.png')
+                .autorizeWrap
 
-				.autorizeWrap
+                    button.autorize_btn Авторизоваться
+                
+                    .flipContainer
+                        .flipper
+            
+                            include ../common/blockUser
 
-					button.autorize_btn Авторизоваться
-				
-					.flipContainer
-						.flipper
-			
-							include ../common/blockUser
+                            .blockUser.back
+                                h3.content_title Авторизуйтесь
+                                include ../common/autorizeForm
+                        
+                    .pageFooter-bottom
+                        p.pageFooter_text
+                            | &copy; | Олег Унгер | Создано с любовью в Loftschool | 2016
 
-							.blockUser.back
-								h3.content_title Авторизуйтесь
-								include ../common/autorizeForm
-						
-					.pageFooter-bottom
-						p.pageFooter_text
-							| &copy; | Олег Унгер | Создано с любовью в Loftschool | 2016
-
-		script(src='assets/js/foundation.js')
-		script(src='assets/js/app.js')
+        script(src='assets/js/foundation.js')
+        script(src='assets/js/app.js')

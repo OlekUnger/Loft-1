@@ -2,7 +2,7 @@
 
 module.exports = function() {
   $.gulp.task('sprite:svg', function() {
-    return $.gulp.src('./source/images/svg/*.svg')
+    return $.gulp.src('./source/images/stars/*.svg')
       .pipe($.gp.svgmin({
         js2svg: {
           pretty: true
@@ -10,8 +10,8 @@ module.exports = function() {
       }))
       .pipe($.gp.cheerio({
         run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
+          // $('[fill]').removeAttr('fill');
+          // $('[stroke]').removeAttr('stroke');
           $('[style]').removeAttr('style');
         },
         parserOptions: { xmlMode: true }
@@ -24,6 +24,6 @@ module.exports = function() {
           }
         }
       }))
-      .pipe($.gulp.dest('./source/images/sprite'))
+      .pipe($.gulp.dest('./source/images/stars'))
   })
 };

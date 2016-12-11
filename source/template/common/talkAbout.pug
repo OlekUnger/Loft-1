@@ -1,5 +1,9 @@
 section.talkAbout
+
    .wrap
+      .starsWrap
+         svg.starsIcon(preserveAspectRatio='none')
+            use(xlink:href="assets/img/sprite/sprite2.svg#stars3")
       h2.content_title.mainTitle
          | Что обо мне 
          br
@@ -37,6 +41,5 @@ section.talkAbout
                button.feedback_button.btnReset Очистить
       a.scrollDown(href='#header')
          svg.scrollDown_icon
-            use(xlink:href='./assets/img/sprite/sprite.svg#portf_arrow_up')
-      
+            use(xlink:href='./assets/img/sprite/sprite.svg#portf_arrow_up')   
    include ../common/footer

@@ -7,13 +7,17 @@
                 background-color: rgba(71, 75, 87, .5)
         &_header
             width: 100%
-            padding: 4.7rem 0
+            height: 180px
             text-align: center
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
             background-color: rgba(17, 17, 33, .85)
             @include w992
-                padding: 3rem 0
+                height: 145px
             @include w768
-                padding: 2.5rem 0
+                height: 133px
             
         &_top
             left: 0
@@ -22,7 +26,19 @@
                 &-left
                     fill: rgba(17, 17, 33, .85)
                 &-right
-                    fill: rgba(17, 17, 33, .85)
+                   fill: rgba(17, 17, 33, .85)
+    .starsWrap
+        @include size(26.3rem 100%)
+        top: 0
+        left: 50%
+        @include w480
+            @include size(16.6rem 100%)
+    .starsIcon
+        @include size(100%)
+        fill: #373b43
+        stroke: #373b43
+        transform: translateX(-50%) rotate(190deg)
+        
     .mainTitle
         color: #fff
         @include inline-top

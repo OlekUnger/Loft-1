@@ -1,131 +1,139 @@
 
-
+        
 .talkAbout
-	min-height: 65rem
-	position: relative
-	width: 100%
-	// background-image: url('../img/bg-beacon.jpg')
-	// background-position: 60% 100%
-	// background-size: 3000px 1969px
-	// background-repeat: no-repeat
-	// background_attachment: fixed
-	overflow: hidden
-	
-	.wrap
-		width: 100%	
-		display: flex
-		flex-direction: column
-		align-items: center
-		padding: 6rem 3rem 7rem
-		@include w768
-			padding: 5rem 3rem 5rem
-		@include w480
-			padding: 4rem 10px 4rem
-		
-	.mainTitle
-		color: #fff
-		margin-bottom: 6rem
-		@include w768
-			margin-bottom: 5rem
-		@include w480
-			margin-bottom: 4rem
+    min-height: 65rem
+    position: relative
+    width: 100%
+    background-image: url('../img/beacon2300.jpg')
+    background-position: 50% 100%
+    background-repeat: no-repeat
+    overflow: hidden
+    .wrap
+        width: 100% 
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 6rem 3rem 7rem
+        @include w768
+            padding: 4rem 3rem 5rem
+        @include w480
+            padding: 3rem 10px 4rem
+        
+    .mainTitle
+        color: #fff
+
+    .starsWrap
+        @include size(173px 200px)
+        top: 25px
+        left: 50%
+        @include w768
+            @include size(149px 175px)
+            top: 15px
+    .starsIcon
+        @include size(100%)
+        transform: translateX(-50%) rotate(20deg)
+        fill: #373b43
+        stroke: #373b43
+            
 .recomendations
-	max-width: 80rem
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
-	margin-bottom: 7rem
-	@include w768
-		flex-direction: column
-		align-items: center
-		margin-bottom: 5rem
-	@include w480
-		margin-bottom: 4rem
+    max-width: 80rem
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 7rem
+    margin-top: 6rem
+    @include w768
+        flex-direction: column
+        align-items: center
+        margin-bottom: 4rem
+        margin-top: 5rem
+    @include w480
+        margin-bottom: 3rem
+        margin-top: 4rem
 .rec
-	&_item
-		width: 45%
-		display: flex
-		flex-direction: column
-		align-items: center
-		color: #fff
-		@include w768
-			width: 70%
-			margin-bottom: 7rem
-			margin-bottom: 5rem	
-		@include w480
-			width: 100%
-			@include w480
-				margin-bottom: 4rem
-		&:last-child
-			margin-bottom: 0
-		strong
-			margin-left: 1rem
-	&_text
-		margin: 0 0 2rem
-		font: 1.6rem/2.6rem 'RobotoItalic', sans-serif
-		
-	&_pic
-		@include size(7.7rem)
-		border-radius: 50%
-		margin-bottom: 1.5rem
-		background-color: #FFF
-		overflow: hidden
+    &_item
+        width: 45%
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        color: #fff
+        @include w768
+            width: 70%
+            margin-bottom: 7rem
+            margin-bottom: 5rem 
+        @include w480
+            width: 100%
+            @include w480
+                margin-bottom: 4rem
+        &:last-child
+            margin-bottom: 0
+        strong
+            margin-left: 1rem
+    &_text
+        margin: 0 0 2rem
+        font: 1.6rem/2.6rem 'RobotoItalic', sans-serif
+        
+    &_pic
+        @include size(7.7rem)
+        border-radius: 50%
+        margin-bottom: 1.5rem
+        background-color: #FFF
+        overflow: hidden
 
 .blur
-	max-width: 380px
-	margin-bottom: 6.2rem
-	position: relative
-	border-radius: 5px
-	overflow: hidden
-	border: 1px solid rgba(255,255,255, .05)
-	@include w480
-		margin-bottom: 4rem
-	&_bg
-		@include size(100%)
-		position: absolute
-		top: 0
-		left: 0
-		background-image: url('../img/bg-beacon.jpg')
-		background-position: 60% 99%
-		background-size: 2315px 1520px
-		background-repeat: no-repeat
-		background-attachment: fixed
-		filter: blur(4px)
-		overflow: hidden
-		z-index: 0
+    max-width: 380px
+    margin-bottom: 6.2rem
+    position: relative
+    border-radius: 5px
+    overflow: hidden
+    border: 1px solid rgba(255,255,255, .05)
+    @include w480
+        margin-bottom: 4rem
+    &_bg
+        @include size(100%)
+        position: absolute
+        top: 0
+        left: 0
+        background-image: url('../img/beacon2300.jpg')
+        background-position: 50% 74%
+        background-repeat: no-repeat
+        filter: blur(2px)
+        overflow: hidden
+        z-index: 0
 .feedback
-	position: relative
+    position: relative
     width: 100%
     z-index: 2
-	&_wrap
-		padding: 3.8rem 2rem 2rem 2rem
-	.content_title
-		padding-bottom: 2.5rem
-		margin-bottom: 2.5rem
-	&_item
-		font: 16px/24px 'RobotoRegular',sans-serif
-		color: rgba(255,255,255, .5)
-		background-color: rgba(255,255,255, .07) 
-		padding: 1rem 1.6rem
-		margin-bottom: 2rem
-		width: 100%
-		border: 0
-		outline: none
-		&:last-child
-			margin-bottom: 0
-	textarea
-		resize: none
-	&_btnsBlock
-		display: flex
-	&_button
-		width: 50%
-		font: 1.6rem/4.5rem 'RobotoRegular', sans-serif
-		color:  rgba(255,255,255, .5)
-		background: transparent
-		border: 0
-		outline: none
-		transition: all ease-in-out .2s
-		&:hover,
-		&:active
-			background: $main-color
-			color: #fff
+    &_wrap
+        padding: 3.8rem 2rem 2rem 2rem
+    .content_title
+        padding-bottom: 2.5rem
+        margin-bottom: 2.5rem
+    &_item
+        font: 16px/24px 'RobotoRegular',sans-serif
+        color: rgba(255,255,255, .5)
+        background-color: rgba(255,255,255, .07) 
+        padding: 1rem 1.6rem
+        margin-bottom: 2rem
+        width: 100%
+        border: 0
+        outline: none
+        &:last-child
+            margin-bottom: 0
+    textarea
+        resize: none
+    &_btnsBlock
+        display: flex
+    &_button
+        width: 50%
+        font: 1.6rem/4.5rem 'RobotoRegular', sans-serif
+        color:  rgba(255,255,255, .5)
+        background: transparent
+        border: 0
+        outline: none
+        transition: all ease-in-out .2s
+        &:hover,
+        &:active
+            background: $main-color
+            color: #fff

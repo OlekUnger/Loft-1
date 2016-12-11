@@ -1,31 +1,31 @@
 form.autorizeForm
-	.inputWrap
-		input(id="login" type="text" name="login" placeholder="Логин" require)
-		label(for="login").formLabel
-			svg.formIcon
-				use(xlink:href="./assets/img/sprite/sprite.svg#login")
-	.inputWrap
-		input(id="login" type="password" name="password" placeholder="Пароль" require)
-		label(for="password").formLabel
-			svg.formIcon
-				use(xlink:href="./assets/img/sprite/sprite.svg#password")
-	label(for="checkbox").checkLabel Я человек	 
-		input(type="checkbox" id="checkbox")
-		span.checkboxIndicator
-			svg.checkIcon
-				use(xlink:href="./assets/img/sprite/sprite.svg#check")
-	fieldset
-		legend Вы точно не робот?
-		.radioWrap
-			input(id="radio-1" type="radio" name="capcha" value="Да" checked)
-			label(for="radio-1").radioLabel Да
-											
-			input(id="radio-2" type="radio" name="capcha" value="Нет")
-			label(for="radio-2").radioLabel Не уверен
-											
+    .inputWrap
+        input(id="login" type="text" name="login" placeholder="Логин" require)
+        label(for="login").formLabel
+            svg.formIcon
+                use(xlink:href="./assets/img/sprite/sprite.svg#login")
+    .inputWrap
+        input(id="login" type="password" name="password" placeholder="Пароль" require)
+        label(for="password").formLabel
+            svg.formIcon
+                use(xlink:href="./assets/img/sprite/sprite.svg#password")
+    label(for="checkbox").checkLabel Я человек   
+        input(type="checkbox" id="checkbox")
+        span.checkboxIndicator
+            svg.checkIcon
+                use(xlink:href="./assets/img/sprite/sprite.svg#check")
+    fieldset
+        legend Вы точно не робот?
+        .radioWrap
+            input(id="radio-1" type="radio" name="capcha" value="Да" checked)
+            label(for="radio-1").radioLabel Да
+                                            
+            input(id="radio-2" type="radio" name="capcha" value="Нет")
+            label(for="radio-2").radioLabel Не уверен
+                                            
 nav.blockUser_nav.nav
-	ul.nav_list
-		li.nav_item
-			a.nav_link(href='aboutMePage.html') На главную
-		li.nav_item
-			a.nav_link(type="submit") Войти
+    ul.nav_list
+        li.nav_item
+            a.nav_link(href='aboutMePage.html') На главную
+        li.nav_item
+            a.nav_link(type="submit") Войти

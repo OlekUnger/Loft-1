@@ -8,6 +8,9 @@ block content
       section#content.content.myWorksPage
          include ../common/triangles
          .content_header
+            .starsWrap
+               svg.starsIcon
+                  use(xlink:href="assets/img/sprite/sprite2.svg#stars2")
             h2.content_title.mainTitle Мои работы
          .slider.slider_wrap
             input#btn-1(type='radio', name='toggle', checked='')
