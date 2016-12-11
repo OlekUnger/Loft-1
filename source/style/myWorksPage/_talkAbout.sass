@@ -4,10 +4,10 @@
 	min-height: 65rem
 	position: relative
 	width: 100%
-	background-image: url('../img/bg-beacon.jpg')
-	background-position: 60% 100%
-	background-size: 3000px 1969px
-	background-repeat: no-repeat
+	// background-image: url('../img/bg-beacon.jpg')
+	// background-position: 60% 100%
+	// background-size: 3000px 1969px
+	// background-repeat: no-repeat
 	// background_attachment: fixed
 	overflow: hidden
 	
@@ -73,12 +73,11 @@
 
 .blur
 	max-width: 380px
-	
 	margin-bottom: 6.2rem
 	position: relative
 	border-radius: 5px
 	overflow: hidden
-	cursor: move
+	border: 1px solid rgba(255,255,255, .05)
 	@include w480
 		margin-bottom: 4rem
 	&_bg
@@ -87,9 +86,10 @@
 		top: 0
 		left: 0
 		background-image: url('../img/bg-beacon.jpg')
-		background-position: 54% 70%
-		background-size: 3000px 1969px
+		background-position: 60% 99%
+		background-size: 2315px 1520px
 		background-repeat: no-repeat
+		background-attachment: fixed
 		filter: blur(4px)
 		overflow: hidden
 		z-index: 0

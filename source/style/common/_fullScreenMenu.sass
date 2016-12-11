@@ -1,22 +1,26 @@
 
 
 .fullScreenMenu
+    @include size(100%)
     position: absolute
     top: 0
     left: 0
-    width: 100%
-    height: 100%
-    z-index: 2
+    z-index: 35
     overflow: hidden
+    background-color: rgba(24, 54, 105, .9)
     display: none
-    .navigation
+    transition: all ease-in-out .2s
+    &.show
+        display: block
+    .nav
         margin-top: 210px
-    .navMenu
-        display: none
-        max-width: 390px
-        margin: 0 auto
-        list-style: none
-        padding: 0
+        
+        &_list
+            // display: none
+            max-width: 390px
+            margin: 0 auto
+            list-style: none
+            padding: 0
         &_item
             text-align: center
         &_link
