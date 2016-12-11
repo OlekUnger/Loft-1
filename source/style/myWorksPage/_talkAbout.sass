@@ -1,14 +1,16 @@
 
 
 .talkAbout
-	min-height: 135.5rem
+	min-height: 65rem
 	position: relative
 	width: 100%
-	background-image: url('../img/beacon-bg.png')
-	background-position: 50% 100%
+	background-image: url('../img/bg-beacon.jpg')
+	background-position: 60% 100%
+	background-size: 3000px 1969px
 	background-repeat: no-repeat
-	background-size: 2000px 1800px
+	// background_attachment: fixed
 	overflow: hidden
+	
 	.wrap
 		width: 100%	
 		display: flex
@@ -68,14 +70,33 @@
 		margin-bottom: 1.5rem
 		background-color: #FFF
 		overflow: hidden
-		
-.feedback
-	max-width: 38rem
-	background-color: rgba(255,255,255, .05)
+
+.blur
+	max-width: 380px
+	
 	margin-bottom: 6.2rem
-	z-index: 5
+	position: relative
+	border-radius: 5px
+	overflow: hidden
+	cursor: move
 	@include w480
 		margin-bottom: 4rem
+	&_bg
+		@include size(100%)
+		position: absolute
+		top: 0
+		left: 0
+		background-image: url('../img/bg-beacon.jpg')
+		background-position: 54% 70%
+		background-size: 3000px 1969px
+		background-repeat: no-repeat
+		filter: blur(4px)
+		overflow: hidden
+		z-index: 0
+.feedback
+	position: relative
+    width: 100%
+    z-index: 2
 	&_wrap
 		padding: 3.8rem 2rem 2rem 2rem
 	.content_title
@@ -108,9 +129,3 @@
 		&:active
 			background: $main-color
 			color: #fff
-.beacon
-	width: 85.3rem
-	height: 98.2rem
-	position: absolute
-	bottom: 0
-	left: 90rem

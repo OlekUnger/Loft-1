@@ -1,13 +1,16 @@
+
+
 .header_wrap
     // min-height: 65px
     width: 100%
     height: 100vh
+    position: relative
     display: flex
     flex-direction: column
     align-items: center
     padding-bottom: 70px
-    // position: relative
     justify-content: space-between
+    z-index: 3
     @include w992
         padding-bottom: 50px
 
@@ -20,15 +23,28 @@
     width: auto
     height: auto
     z-index: -100
+.layer-2,
+.layer-1
+    position: absolute
+    left: 0
+    top: 0
 
-.headerSection
-    padding-bottom: 185px
+.layer-1
+   @include size(100% 100vh)
+.layer-2 
+    @include size(100% 100%)
     background-image: url('../img/mount.png')
     background-repeat: no-repeat
     background-position: 50% 112%
     background-size: 3600px 700px
+    // position: relative
+    
+.headerSection
+    padding-bottom: 185px
     position: relative
     overflow: hidden
+    background-image: url('../img/bg-blue.jpg')
+    background-size: cover 
     
 .header
     padding: 30px

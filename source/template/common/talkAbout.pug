@@ -24,18 +24,19 @@ section.talkAbout
                strong Зар Захаров
                br
                | - преподаватель
-      form.feedback(action='#')
-         .feedback_wrap
-            h3.content_title.content_title-markedLight Связаться со мной
-            input.feedback_item(type='text', placeholder='Ваше имя')
-            input.feedback_item(type='text', placeholder='Ваш email')
-            textarea.feedback_item(name='', id='', cols='10', rows='5', placeholder='Ваше сообщение')
-         .feedback_btnsBlock
-            button.feedback_button.btnSubmit Отправить
-            button.feedback_button.btnReset Очистить
+      .blur
+         .blur_bg
+         form.feedback(action='#')
+            .feedback_wrap
+               h3.content_title.content_title-markedLight Связаться со мной
+               input.feedback_item(type='text', placeholder='Ваше имя')
+               input.feedback_item(type='text', placeholder='Ваш email')
+               textarea.feedback_item(name='', id='', cols='10', rows='5', placeholder='Ваше сообщение')
+            .feedback_btnsBlock
+               button.feedback_button.btnSubmit Отправить
+               button.feedback_button.btnReset Очистить
       a.scrollDown(href='#header')
          svg.scrollDown_icon
             use(xlink:href='./assets/img/sprite/sprite.svg#portf_arrow_up')
-      .beacon
-         img(src='assets/img/beacon.png')
+      
    include ../common/footer

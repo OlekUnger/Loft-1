@@ -1,20 +1,27 @@
 section.headerSection#header
-	video#bgvideo(autoplay loop muted).bgvideo
-		source(src="assets/img/night.mp4" type="video/mp4")
+	.layer-1
+	//- video#bgvideo(autoplay loop muted).bgvideo
+	//- 	source(src="assets/img/night.mp4" type="video/mp4")
+	.layer-2
+		
 	.header_wrap
 		
 		header.header
 			include ../common/socials
 			a.menuButton
 				span
-		
+					
+		.blockUser-wrap
+			.blockUser_info
+				.blockUser_photo
+					img(src='./assets/img/Me.png')
+				h3.blockUser_title Олег Унгер
+				p.blockUser_text Личный сайт веб разработчика
 
-		.blockUser_info
-			.blockUser_photo
-				img(src='./assets/img/me.jpg')
-			h3.blockUser_title Олег Унгер
-			p.blockUser_text Личный сайт веб разработчика
 		a.scrollDown(href='#content')
 			svg.scrollDown_icon
 				use(xlink:href='./assets/img/sprite/sprite.svg#arrow_down')
+
+	
+		
 		
