@@ -5,7 +5,8 @@
 	$(".menuButton").click(function(e){
 		e.preventDefault();
 		$(this).toggleClass("active");
-		$(".fullScreenMenu").toggleClass("show");
+		$(".fullScreenMenu").fadeToggle().toggleClass("show");
+		
 	});
 })();
 
@@ -39,6 +40,7 @@ var parallax = (function(){
 			style.transform = tarnsformString;
 			style.webkitTransform = tarnsformString;
 		},
+
 		init: function(wScroll) {
 			this.move( bg2, wScroll, 85),
 			this.move(user, wScroll, -50);
@@ -47,7 +49,10 @@ var parallax = (function(){
 	}
 }());
 
-
+window.onscroll = function(){
+	var wScroll = window.pageYOffset;
+	parallax.init(wScroll);
+}
 
 // blur
 
@@ -72,14 +77,11 @@ var parallax = (function(){
 // blur.set();
 
 
-window.onscroll = function(){
-	var wScroll = window.pageYOffset;
-	parallax.init(wScroll);
-}
 
-window.onresize = function(){
-	blur.set();
-}
+
+// window.onresize = function(){
+// 	blur.set();
+// }
 
 
 

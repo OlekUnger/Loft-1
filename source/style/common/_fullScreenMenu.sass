@@ -7,14 +7,35 @@
     left: 0
     z-index: 35
     overflow: hidden
-    background-color: rgba(24, 54, 105, .9)
     display: none
     transition: all ease-in-out .2s
     &.show
-        display: block
+        
+        .overlay-left
+            transform: translate(100%)
+            // transition: all ease-in-out
+            // transition-delay: .4s
+        .overlay-right
+            transform: translate(-100%)
+        
+        .nav_item
+            opacity: 1
+            transition: all ease-in-out
+            transition-duration: 1.5s
+            &:nth-child(1)
+                transition-delay: .4s
+            &:nth-child(2) 
+                transition-delay: .6s
+            &:nth-child(3) 
+                transition-delay: .8s
+            &:nth-child(4)
+                transition-delay: 1s
+
     .nav
+       
         margin-top: 21rem
         include w768
+        
             margin-top: 15rem
         &_list
             max-width: 390px
@@ -23,6 +44,8 @@
             padding: 0
         &_item
             text-align: center
+            opacity: 0
+                
         &_link
             display: block
             position: relative
@@ -49,20 +72,24 @@
                 transition: all 0.3s ease-in-out
 
     
-.overlay-left,
-.overlay-right
+.overlay
     position: absolute
     top: 0
     width: 50%
     height: 100%
     background-color: rgba(24, 54, 105, .87)
-    z-index: 2
+    transition: all ease-in-out .3s
+    // z-index: 35
+  
     
 
 .overlay-left
     left: -50%
+
+    // transform: translate(-100%)
 .overlay-right
     right: -50%
+    // transform: translate(100%) 
 
 
 
