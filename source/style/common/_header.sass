@@ -9,17 +9,16 @@
     align-items: center
     padding-bottom: 7rem
     justify-content: space-between
+
     @include w992
         padding-bottom: 5rem
 .bgvideo
     position: absolute
-    left: 0
+    left: -20px
     top: -200px
-    min-width: 100%
+    min-width: 105%
     min-height: 100%
-    width: auto
-    height: auto
-    z-index: -100
+    z-index: 0
 .layer-2,
 .layer-1,
 .layer-0
@@ -33,9 +32,10 @@
         @include size(100%) 
 .layer-1
     @include size(100%)
-    #bgvideo
-        height: 100%
-        width: auto     
+    // background-color: green
+    // #bgvideo
+    //     height: 100%
+    //     margin-left: -20px    
 .layer-2 
     @include size(100% 100vh)
     img
