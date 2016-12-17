@@ -78,6 +78,54 @@ a
     min-width: 32rem
     margin: 0 auto
 
-    
+.preloader
+    position: fixed
+    top: 0
+    left: 0
+    @include size(100%)
+    background-color: rgba(24, 54, 105, .87)
+    z-index: 999
+    &_spinner
+        @include size(15rem)
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &_percents
+        position: absolute
+        top: 50%
+        left: 50%
+        color: #fff
+        transform: translate(-50%,-50%)
+    &_animation
+        @include size(15rem)
+        position: relative
+        animation: spin 2s linear infinite
+        &,&::before,
+        &::after
+            border-radius: 50%
+            border-top: 3px solid #fff
+        &::before,
+        &::after
+            position: absolute
+            @include pseudo
+        &::before
+            top: 6px
+            bottom: 6px
+            left: 6px
+            right: 6px
+            animation: spin 3s linear infinite
+        &::after
+            top: 15px
+            bottom: 15px
+            left: 15px
+            right: 15px
+            animation: spin 1.5s linear infinite
+
+@keyframes spin
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)   
    
    
