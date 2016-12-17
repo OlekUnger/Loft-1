@@ -1,12 +1,11 @@
 section.headerSection#header
-   
-    .layer-0
-        img(src="assets/img/bg-blue.jpg")
-    .layer-1
+    .parallax
+        
+        .layer-1
         //- video#bgvideo(autoplay loop muted).bgvideo
         //-     source(src="assets/img/night.mp4" type="video/mp4")          
-    .layer-2
-        img(src='./assets/img/mount.png')
+        .layer-2
+            img(src='./assets/img/mount.png')
     .header_wrap
         header.header
             include ../common/socials
@@ -25,7 +24,7 @@ section.headerSection#header
 
         a.scrollDown(href='#content')
             svg.scrollDown_icon
-                use(xlink:href='./assets/img/sprite/sprite.svg#arrow_down')
+                use(xlink:href='assets/img/sprite/sprite.svg#arrow_down')
 
     
         

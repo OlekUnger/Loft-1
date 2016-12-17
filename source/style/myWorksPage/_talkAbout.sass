@@ -82,12 +82,14 @@
         overflow: hidden
 
 .blur
-    max-width: 380px
+    width: 380px
     margin-bottom: 6.2rem
     position: relative
     border-radius: 5px
     overflow: hidden
     border: 1px solid rgba(255,255,255, .05)
+    z-index: 2
+    padding: 3.8rem 0 0
     @include w480
         margin-bottom: 4rem
     &_bg
@@ -100,28 +102,31 @@
         background-repeat: no-repeat
         filter: blur(2px)
         overflow: hidden
-        z-index: 0
+        z-index: -1
 .feedback
-    position: relative
     width: 100%
-    z-index: 2
+    
     &_wrap
-        padding: 3.8rem 2rem 2rem 2rem
+        width: 100%
+        padding: 2rem 2rem
     .content_title
         padding-bottom: 2.5rem
         margin-bottom: 2.5rem
     &_item
+        margin-bottom: 2rem
+        width: 100%
+        &:last-child
+            margin-bottom: 0
+    input,
+    textarea
+        display: block
         font: 16px/24px 'RobotoRegular',sans-serif
         color: rgba(255,255,255, .5)
         background-color: rgba(255,255,255, .07) 
         padding: 1rem 1.6rem
-        margin-bottom: 2rem
         width: 100%
         border: 0
         outline: none
-        &:last-child
-            margin-bottom: 0
-    textarea
         resize: none
     &_btnsBlock
         display: flex
@@ -132,8 +137,18 @@
         background: transparent
         border: 0
         outline: none
+        padding: 0
         transition: all ease-in-out .2s
         &:hover,
         &:active
             background: $main-color
             color: #fff
+.feedback_item
+    &.is-valid                
+        input
+            box-shadow: 0 0 2px 1px green
+    &.not-valid
+        input
+            box-shadow: 0 0 2px 1px #e4484
+        .errorFlag
+            display: block!important
