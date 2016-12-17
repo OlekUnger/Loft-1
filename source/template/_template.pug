@@ -7,7 +7,7 @@ html(lang='en')
 
     block title
       title Главная
-    
+    link(rel='shortcut icon' href='assets/img/fav_night.png' type='image/png')
     link(rel='stylesheet', type='text/css', href='assets/css/app.css')
     link(rel='stylesheet', type='text/css', href='assets/css/normalise.css')
   body
@@ -18,7 +18,12 @@ html(lang='en')
         block content
       
         
-        include ./common/fullScreenMenu
+    include ./common/fullScreenMenu
+
+    .preloader
+        .preloader_spinner
+            .preloader_animation
+            .preloader_percents 0%
 
     script(src='assets/js/foundation.js')
     script(src='assets/js/app.js')
