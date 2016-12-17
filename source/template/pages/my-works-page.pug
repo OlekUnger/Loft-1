@@ -1,0 +1,45 @@
+extends ../_template
+
+block title
+   title My works
+
+block content
+      
+      section#content.content.myWorksPage
+         include ../common/triangles
+         .content_header
+            .starsWrap
+               svg.starsIcon
+                  use(xlink:href="assets/img/sprite/sprite2.svg#stars2")
+            h2.content_title.mainTitle Мои работы
+         .slider.slider_wrap
+            input#btn-1(type='radio', name='toggle', checked='')
+            input#btn-2(type='radio', name='toggle')
+            input#btn-3(type='radio', name='toggle')
+            input#btn-4(type='radio', name='toggle')
+            .slider_controls
+               label(for='btn-1')
+                  span.icon-left
+               label(for='btn-2')
+                  span.icon-right
+               label(for='btn-3')
+                  span.icon-left
+               label(for='btn-4')
+                  span.icon-right
+            .slider_nav
+               svg.navIcon.navIcon-left
+                  use(xlink:href='./assets/img/sprite/sprite.svg#arrow_down')
+               svg.navIcon.navIcon-right
+                  use(xlink:href='./assets/img/sprite/sprite.svg#arrow_down')
+            .slider_item
+               .slider_item-left
+               .slider_item-right
+                  .site
+                     h3.content_title.content_title-markedDark Сайт школы онлайн образования
+                     p.site_text HTML, CSS, Javascript
+                     a.site_linkBtn(href='#')
+                        | Посмотреть сайт
+                        svg.siteIcon
+                           use(xlink:href='./assets/img/sprite/sprite.svg#link')
+         .slider_item
+      include ../common/talkAbout
