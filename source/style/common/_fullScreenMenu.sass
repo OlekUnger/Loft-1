@@ -1,4 +1,20 @@
+.overlay
+        position: absolute
+        top: 0
+        min-width: 50%
+        height: 100%
+        background-color: rgba(24, 54, 105, .87)
+        transition: all ease-in-out .2s
+        // z-index: 35
+.overlay-left
+    top: 0
+    left: 0
+    transform: translateX(-100%)
 
+.overlay-right
+    top: 0
+    right: 0
+    transform: translateX(100%)
 
 .fullScreenMenu
     @include size(100%)
@@ -12,9 +28,11 @@
     &.show
         
         .overlay-left
-            transform: translate(100%)
+            left: 0
+            transform: translateX(0%)
         .overlay-right
-            transform: translate(-100%)
+            right: 0
+            transform: translateX(0%)
         
         .nav_item
             opacity: 1
@@ -70,24 +88,8 @@
                 transition: all 0.3s ease-in-out
 
     
-.overlay
-    position: absolute
-    top: 0
-    width: 50%
-    height: 100%
-    background-color: rgba(24, 54, 105, .87)
-    transition: all ease-in-out .3s
-    // z-index: 35
-  
+
     
-
-.overlay-left
-    left: -50%
-
-    // transform: translate(-100%)
-.overlay-right
-    right: -50%
-    // transform: translate(100%) 
 
 
 
