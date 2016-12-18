@@ -1,4 +1,12 @@
 
+.feedback_item
+    &.is-valid                
+        input
+            box-shadow: 0 0 2px 1px green 
+      
+    &.not-valid
+        input
+            box-shadow: 0 0 2px 1px #e44845
         
 .talkAbout
     min-height: 65rem
@@ -114,6 +122,7 @@
         margin-bottom: 2.5rem
     &_item
         margin-bottom: 2rem
+        position: relative
         width: 100%
         &:last-child
             margin-bottom: 0

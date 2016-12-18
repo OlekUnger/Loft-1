@@ -122,114 +122,114 @@ return {
 
 flipModule.init();
 
-// ++++++++++++++++++++++++++++ V A L I D A T E ++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++ V A L I D A T E - 1 ++++++++++++++++++++++++
 
-var validate = function(){
+// var validate = function(){
 
-    var validateForm = $('form');
+//     var validateForm = $('form');
 
-    validateForm.each(function(){
+//     validateForm.each(function(){
     
-        var validateForm = $(this);
-        var validate = {};
-        var validateThis = $(this).find('input');
-        var validatingLength = $(this).find('input').length;
-        var submitBtn = $(this).find('.submit');
+//         var validateForm = $(this);
+//         var validate = {};
+//         var validateThis = $(this).find('formField');
+//         var validatingLength = $(this).find('formField').length;
+//         var submitBtn = $(this).find('.submit');
 
     
-        for(var i = 1; i <= validatingLength; i++){
+//         for(var i = 1; i <= validatingLength; i++){
       
-            validate['input'+i] = false;
-        }
+//             validate['input'+i] = false;
+//         }
 
-        $('.input').blur(function(){
-            var index =  $(this).prevAll().length+1;
-            var validateThisVal = $(this).val();
-            var validateThisType = $(this).attr('type');
+//         $('.formField').blur(function(){
+//             var index =  $(this).prevAll().length+1;
+//             var validateThisVal = $(this).val();
+//             var validateThisType = $(this).attr('type');
 
-            if(validateThisType === "email"){
+//             if(validateThisType === "email"){
 
         
-                var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//                 var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             
-                if(!validateThisVal.match(re)){
-                    $(this).parent().addClass('not-valid');
-                    $(this).parent().removeClass('is-valid');
-                    return validate['input'+index] = false;
-                } else{
-                    $(this).parent().addClass('is-valid');
-                    $(this).parent().removeClass('not-valid');
-                    return validate['input'+index] = true;
-                }
-            } else {
+//                 if(!validateThisVal.match(re)){
+//                     $(this).parent().addClass('not-valid');
+//                     $(this).parent().removeClass('is-valid');
+//                     return validate['input'+index] = false;
+//                 } else{
+//                     $(this).parent().addClass('is-valid');
+//                     $(this).parent().removeClass('not-valid');
+//                     return validate['input'+index] = true;
+//                 }
+//             } else {
         
-                if(validateThisVal == ""){
-                    $(this).parent().addClass('not-valid');
-                    $(this).parent().removeClass('is-valid');
-                    return validate['input'+index] = false;
-                } else{
-                    $(this).parent().addClass('is-valid');
-                    $(this).parent().removeClass('not-valid');
-                    return validate['input'+index] = true;
-                }
-            }
-        });
+//                 if(validateThisVal == ""){
+//                     $(this).parent().addClass('not-valid');
+//                     $(this).parent().removeClass('is-valid');
+//                     return validate['input'+index] = false;
+//                 } else{
+//                     $(this).parent().addClass('is-valid');
+//                     $(this).parent().removeClass('not-valid');
+//                     return validate['input'+ index] = true;
+//                 }
+//             }
+//         });
 
     
-        validateForm.on('submit', function(e){
-            e.preventDefault();
+//         validateForm.on('submit', function(e){
+//             e.preventDefault();
 
      
-            var falseCtn = 0;
-            for(var i = 1; i <= validatingLength; i++){
-                if(validate['input'+i] == false){
-                falseCtn++;
-                }
-            }
+//             var falseCtn = 0;
+//             for(var i = 1; i <= validatingLength; i++){
+//                 if(validate['input'+i] == false){
+//                 falseCtn++;
+//                 }
+//             }
 
-            if(falseCtn > 0){
-                $(this).unbind('submit').submit();
-                $(this).click();
-            }
+//             if(falseCtn > 0){
+//                 $(this).unbind('submit').submit();
+//                 $(this).click();
+//             }
 
-        });
+//         });
 
 
-    });
-};
+//     });
+// };
 
-validate();
+// validate();
    // ++++++++++++++++++ P A R A L L A X ++++++++++++++++++++++++++++
 
 
 var parallaxModule = (function(){
-	// var bg1 = document.querySelector(".layer-1");
-	var bg2 = document.querySelector(".layer-2");
-	var user = document.querySelector(".blockUser-wrap");
-	var headerWrap = document.querySelector(".header_wrap");
+    // var bg1 = document.querySelector(".layer-1");
+    var bg2 = document.querySelector(".layer-2");
+    var user = document.querySelector(".blockUser-wrap");
+    var headerWrap = document.querySelector(".header_wrap");
 
-	return {
-		move: function (block, windowScroll, strafeAmount) {
-			var strafe = windowScroll/strafeAmount + '%';
-			var tarnsformString = 'translate3d(0, '+strafe+', 0)';
-			var style = block.style;
+    return {
+        move: function (block, windowScroll, strafeAmount) {
+            var strafe = windowScroll/strafeAmount + '%';
+            var tarnsformString = 'translate3d(0, '+strafe+', 0)';
+            var style = block.style;
 
-			style.top =strafe;
-			style.transform = tarnsformString;
-			style.webkitTransform = tarnsformString;
-		},
+            style.top =strafe;
+            style.transform = tarnsformString;
+            style.webkitTransform = tarnsformString;
+        },
 
-		init: function(wScroll) {
-			// this.move(bg1,wScroll, 85)
-			this.move( bg2, wScroll, 85),
-			this.move(user, wScroll, -50);
-		}
-	}
+        init: function(wScroll) {
+            // this.move(bg1,wScroll, 85)
+            this.move( bg2, wScroll, -85),
+            this.move(user, wScroll, 50);
+        }
+    }
 }());
 
 window.onscroll = function(){
-	var wScroll = window.pageYOffset;
-	parallaxModule.init(wScroll);
+    var wScroll = window.pageYOffset;
+    parallaxModule.init(wScroll);
 };
 
 
@@ -329,93 +329,134 @@ function initMap() {
   });
   var image='assets/img/map-marker-n.png';
   var mapMarker= new google.maps.Marker({
-  	position: {lat: 59.934, lng: 30.297},
-  	map: map,
-  	icon: image
+    position: {lat: 59.934, lng: 30.297},
+    map: map,
+    icon: image
   });
 
   map.mapTypes.set(customMapTypeId, customMapType);
   map.setMapTypeId(customMapTypeId);
 };
 
+// +++++++++++++++++++++++B L O G ++++++++++++++++++++++++++++++++++
 
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// var simpleValidation = function(){
+var blogModule =(function(){
 
-//   var validateForm = $('form');
+    var     blog_nav =$('.blog_nav').children('nav'),
+            blog_navTop = blog_nav.offset().top-200;
 
-//   // Gets all forms to Validate
-//   validateForm.each(function(){
-//     // Defining basic variables, bro
-//     var validateForm = $(this);
-//     var validate = {};
-//     var validateThis = $(this).find('.formField');
-//     var validatingLength = $(this).find('.formField').length;
-//     var submitBtn = $(this).find('.submit');
+    var init = function(){
+        _setUpListners();
+       
+    };
 
-//     // For Loop Getting Elements to Validate
-//     for(var i = 1; i <= validatingLength; i++){
-//       // Adding Inputs to object, false for default
-//       validate['input'+i] = false;
-//     }
+    var _setUpListners = function(){
+        $(window).on('scroll', _fixed);
+        $(window).on('scroll', _checkArticle);
+        
+    };
 
-//     $('.formField').blur(function(){
-//       var index =  $(this).prevAll().length+1;
-//       var validateThisVal = $(this).val();
-//       var validateThisType = $(this).attr('type');
+    var _fixed = function(){
 
-//       // Checks if input type is email
-//       if(validateThisType === "email"){
+        var 
+            wScroll = $(window).scrollTop();
+        
+        if(blog_navTop < wScroll){
+            blog_nav.addClass('fixed');
+        } else {
+            blog_nav.removeClass('fixed');
+        }
+    };
 
-//         // Email regex
-//         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//         // Condition to see if Email exists
-//         if(!validateThisVal.match(re)){
-//           $(this).addClass('not-valid');
-//           $(this).removeClass('is-valid');
-//           return validate['input'+index] = false;
-//         } else{
-//           $(this).addClass('is-valid');
-//           $(this).removeClass('not-valid');
-//           return validate['input'+index] = true;
+
+    var _showArticle = function(article, isAnimate){
+       var direction = article.replace(/#/, ''),
+           reqArticle = $('.blog_article').filter('[data-article"'+ direction +'"]'),
+           reqArticlePos = reqArticle.offset().top;
+       if(isAnimate){
+           $('body, html').animate({scrollTop: reqArticlePos}, 500);
+       } else {
+           $('body, html').scrollTop(reqArticlePos);
+       }
+   };
+
+    var _checkArticle = function(){
+
+        $('.blog_article').each(function(){
+            var $this= $(this),
+                topEdge = $this.offset().top-200,
+                bottomEdge = topEdge + $this.height(),
+                wScroll = $(window).scrollTop();
+
+            if(topEdge < wScroll && bottomEdge > wScroll){
+                var currentId = $this.data('article');
+                console.log(currentId);
+                var   reqLink = $('.nav_link').filter('[href="#' + currentId +'"]');
+
+                reqLink.closest('.nav_item').addClass('active').siblings().removeClass('active');
+  
+            }
+
+        });
+
+    };
+
+
+
+    return {
+        init: init
+    };
+     
+
+})();
+
+blogModule.init();
+// ++++++++++++++++++++++VALIDATE -2++++++++++++++++++++++++++++++++
+// (function(){
+
+//     var app = {
+//         initialize: function(){
+//             this.modules();
+//             this.setUpListeners();
+//         },
+
+//         modules: function(){
+
+//         },
+
+//         setUpListeners: function(){
+//             $('#feedbackForm').on('submit', app.submitForm);
+//         },
+
+//         submitForm: function(e) {
+//             e.preventDefault();
+//             var form = $(this);
+
+//             app.validateForm(form);
+//         },
+
+//         validateForm: function(form){
+//             var inputs = form.find('input');
+//                 valid = true;
+
+            
+
+//             $.each(inputs, function(index, val){
+//                 var input = $('input'),
+//                     val = input.val(),
+//                     f_item = input.parents('.feedback_item'),
+//                     textError = 'Вы не заполнили поле';
+
+//                 if(val===''){
+//                     f_item.addClass('not-valid').removeClass('is-valid');
+//                     valid = false
+//                 } else {
+//                     // f_item.addClass('is-valid');
+//                 }
+//                 return valid;
+//             });
 //         }
-//       } else{
-//         // Makes sure input is filled out
-//         if(validateThisVal == ""){
-//           $(this).addClass('not-valid');
-//           $(this).removeClass('is-valid');
-//           return validate['input'+index] = false;
-//         } else{
-//           $(this).addClass('is-valid');
-//           $(this).removeClass('not-valid');
-//           return validate['input'+index] = true;
-//         }
-//       }
-//     });
+//     } 
 
-
-//     validateForm.submit(function(event){
-//       // Prevents Default
-//       event.preventDefault();
-
-//       // Logging form errors
-//       var falseCtn = 0;
-//       for(var i = 1; i <= validatingLength; i++){
-//         if(validate['input'+i] == false){
-//           falseCtn++;
-//         }
-//       }
-
-//       // Checking if any falses exist
-//       if(falseCtn > 0){
-//         $(this).unbind('submit').submit();
-//         $(this).click();
-//       } else{
-//       }
-//     });
-
-//   });
-
-// };
-
-// simpleValidation();
+//     app.initialize();
+// })();
