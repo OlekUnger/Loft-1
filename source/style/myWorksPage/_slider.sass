@@ -1,16 +1,40 @@
 .slider
+    height: 100vh
+    width: 100%
+    min-height: 65rem
+
+    position: relative
+    background-color: #e3e2de
+    display: flex
+    overflow: hidden
+    
     &_wrap
-        height: 100vh
-        width: 100%
-        min-height: 65rem
-        position: relative
-        background-color: #e3e2de
         display: flex
-        
+        margin: 0 auto
+        padding: 0 4rem
+        width: 90%
+        position: relative
+        overflow: hidden
+        // transition: .3s
+        // left: 0%
+   
     &_item
         width: 100%
+        background-color: #e3e2de
+        height: 100%
+
+        position: absolute //
+        top: 0  //              
+        left: 0 //
+        z-index: 0  //
+
         display: flex
         padding: 0px 4rem
+        &.active //
+            position: relative //
+            z-index: 1 //
+        &.inslide
+            z-index: 2
         @include w992
             flex-direction: column
             padding: 0 3rem
@@ -29,6 +53,11 @@
             @include w992
                 order: 1
                 height: 40vh
+    &_img
+        width: 70%
+        height: 70%
+        overflow: hidden
+
     &_controls
         position: absolute
         height: 11px
@@ -43,7 +72,7 @@
         label
             width: 11px
             height: 11px
-            margin: 0 10px
+            margin: 0 5px
             border: 2px solid $main-color
             background-color: #fff
             border-radius: 50%
@@ -56,29 +85,21 @@
         justify-content: space-between
         top: 50%
         left: 0
+        z-index: 10
         padding: 0px 2.5rem
         @include w320
             padding: 0 10px
-    .navIcon
-        @include size(2.6rem 1.6rem)
-        transition: all ease-in-out .1s
-        fill: $main-color
-        fill-opacity: .7
-        &:hover
-            fill-opacity: 1
-        &-left
-            transform: rotate(90deg)
-        &-right
-            transform: rotate(-90deg)
-
-input[type=radio]
-    display: none
-
-#btn-1:checked ~ .slider_controls label[for="btn-1"],
-#btn-2:checked ~ .slider_controls label[for="btn-2"],
-#btn-3:checked ~ .slider_controls label[for="btn-3"],
-#btn-4:checked ~ .slider_controls label[for="btn-4"]
-  background-color: $main-color
+.navIcon
+    @include size(2.6rem 1.6rem)
+    transition: all ease-in-out .1s
+    fill: $main-color
+    fill-opacity: .7
+    &:hover
+        fill-opacity: 1
+    &-left
+        transform: rotate(90deg)
+    &-right
+        transform: rotate(-90deg)
 
 
 .site
@@ -131,6 +152,14 @@ input[type=radio]
             left: 1.5rem
             fill: #fff
 
+input[type=radio]
+    display: none
+
+#btn-1:checked ~ .slider_controls label[for="btn-1"],
+#btn-2:checked ~ .slider_controls label[for="btn-2"],
+#btn-3:checked ~ .slider_controls label[for="btn-3"],
+#btn-4:checked ~ .slider_controls label[for="btn-4"]
+    background-color: $main-color
 
 
 
