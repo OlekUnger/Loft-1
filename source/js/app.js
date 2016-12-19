@@ -4,7 +4,7 @@
 var blogModule =(function(){
 
     var     blog_nav = $('.blog_nav .nav'),
-            blog_navTop = blog_nav.offset().top-200;
+            blog_navTop = blog_nav.offset().top;
 
     var init = function(){
         _setUpListners();
@@ -45,7 +45,7 @@ var blogModule =(function(){
 
         $('.blog_article').each(function(){
             var $this= $(this),
-                topEdge = $this.offset().top-200,
+                topEdge = $this.offset().top-300,
                 bottomEdge = topEdge + $this.height(),
                 wScroll = $(window).scrollTop();
 

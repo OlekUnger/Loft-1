@@ -37,10 +37,18 @@ var slider = (function(){
 				}
 			});
 
-			$('.sliderDot').on('click', function(e){
+			$('.dot').on('click', function(e){
 				e.preventDefault();
 
-				
+				var $this = $(this);
+					dots = $this.closest('.slider_controls').find('.dot'),
+					activeDot = dots.filter('.active'),
+					dot = $this.closest('.dot'),
+					curDotNum = dot.index(),
+					direction =(activeDot.index()< curDotNum) ? 'forward' : 'backward';
+					reqSlide = $this.closest('.slider').find('.slider_item').eq(curDotNum);
+
+				_this.moveSlide(reqSlide, direction);
 			});
 		},
 
@@ -79,9 +87,8 @@ var slider = (function(){
 			var _this = this,
 				container = $('.slider');
 
-			var dotMarkup = '<p class="dotWrap"> \
-								<a class="sliderDot" href="#"> \
-							</p>';
+			var dotMarkup = '<a class="dot" href="#"></a>'; 
+							
 
 			container.each(function(){
 				var $this = $(this),
@@ -97,10 +104,10 @@ var slider = (function(){
 				
 		},
 		setActiveDot: function(container){
-			var slides = container.find('.slider_item');
+			var slides = container.closest('.slider').find('.slider_item');
 
 			container
-					.find('.dotWrap')
+					.find('.dot')
 					.eq(slides.filter('.active').index())
 					.addClass('active')
 					.siblings()

@@ -13,25 +13,17 @@ block content
                   use(xlink:href="assets/img/sprite/sprite2.svg#stars2")
             h2.content_title.mainTitle Мои работы
          .slider
-            input#btn-1(type='radio', name='toggle', checked='')
-            input#btn-2(type='radio', name='toggle')
-            input#btn-3(type='radio', name='toggle')
-            input#btn-4(type='radio', name='toggle')
             .slider_controls
-               label(for='btn-1')
-                  span.icon-left
-               label(for='btn-2')
-                  span.icon-right
-               label(for='btn-3')
-                  span.icon-left
-               label(for='btn-4')
-                  span.icon-right
+               //- a.dot(href="#")
+               //- a.dot(href="#")
+               //- a.dot(href="#")
+               //- a.dot(href="#")
 
             .slider_nav
-               a.sliderBtn.prev(href="#")
+               span.sliderBtn.prev(href="#")
                   svg.navIcon.navIcon-left
                      use(xlink:href='./assets/img/sprite/sprite.svg#arrow_down')
-               a.sliderBtn.next(href="#")         
+               span.sliderBtn.next(href="#")         
                   svg.navIcon.navIcon-right
                      use(xlink:href='./assets/img/sprite/sprite.svg#arrow_down')
             .slider_wrap         
