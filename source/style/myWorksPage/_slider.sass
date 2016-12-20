@@ -2,16 +2,14 @@
     height: 100vh
     width: 100%
     min-height: 65rem
-
     position: relative
     background-color: #e3e2de
     display: flex
     overflow: hidden
-    
     &_wrap
         display: flex
         margin: 0 auto
-        padding: 0 4rem
+        // padding: 0 4rem
         width: 90%
         position: relative
         overflow: hidden
@@ -29,7 +27,7 @@
         z-index: 0  //
 
         display: flex
-        padding: 0px 4rem
+        // padding: 0px 4rem
         &.active //
             position: relative //
             z-index: 1 //
@@ -69,7 +67,7 @@
         display: flex
         justify-content: center
         align-items: center
-        label
+        .dot
             width: 11px
             height: 11px
             margin: 0 5px
@@ -77,6 +75,9 @@
             background-color: #fff
             border-radius: 50%
             cursor: pointer
+            &.active,
+            &:hover
+                background-color: $main-color
             
     &_nav
         @include size(100% 26px)
@@ -152,14 +153,7 @@
             left: 1.5rem
             fill: #fff
 
-input[type=radio]
-    display: none
 
-#btn-1:checked ~ .slider_controls label[for="btn-1"],
-#btn-2:checked ~ .slider_controls label[for="btn-2"],
-#btn-3:checked ~ .slider_controls label[for="btn-3"],
-#btn-4:checked ~ .slider_controls label[for="btn-4"]
-    background-color: $main-color
 
 
 
