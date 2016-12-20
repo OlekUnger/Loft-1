@@ -95,23 +95,13 @@
     position: relative
     border-radius: 5px
     overflow: hidden
-    border: 1px solid rgba(255,255,255, .05)
+    background-color:  rgba(255,255,255, .05)
     z-index: 2
     padding: 3.8rem 0 0
     @include w480
         margin-bottom: 4rem
         width: 300px
-    &_bg
-        @include size(100%)
-        position: absolute
-        top: 0
-        left: 0
-        background-image: url('../img/bg-beacon.jpg')
-        background-position: 50% 74%
-        background-repeat: no-repeat
-        filter: blur(2px)
-        overflow: hidden
-        z-index: -1
+    
 .feedback
     width: 100%
     
