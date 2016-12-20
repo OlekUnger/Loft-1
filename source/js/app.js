@@ -3,8 +3,10 @@
 
 var blogModule =(function(){
 
+
     var     blog_nav = $('.blog_nav .nav'),
             blog_navTop = blog_nav.offset().top;
+            blog_link = $('.blog_nav').find('.nav_link');
 
     var init = function(){
         _setUpListners();
@@ -14,7 +16,15 @@ var blogModule =(function(){
     var _setUpListners = function(){
         $(window).on('scroll', _fixed);
         $(window).on('scroll', _checkArticle);
+        blog_link.on('click', _scrollToArticle);
         
+    };
+
+    var _scrollToArticle = function(e){
+        e.preventDefault();
+        var article = $(this).attr('href');
+
+        _showArticle($(this).attr('href'), true);
     };
 
     var _fixed = function(){
@@ -32,7 +42,7 @@ var blogModule =(function(){
 
     var _showArticle = function(article, isAnimate){
        var direction = article.replace(/#/, ''),
-           reqArticle = $('.blog_article').filter('[data-article"'+ direction +'"]'),
+           reqArticle = $('.blog_article').filter('[data-article="'+ direction +'"]'),
            reqArticlePos = reqArticle.offset().top;
        if(isAnimate){
            $('body, html').animate({scrollTop: reqArticlePos}, 500);
@@ -45,7 +55,7 @@ var blogModule =(function(){
 
         $('.blog_article').each(function(){
             var $this= $(this),
-                topEdge = $this.offset().top-300,
+                topEdge = $this.offset().top-400,
                 bottomEdge = topEdge + $this.height(),
                 wScroll = $(window).scrollTop();
 
@@ -55,7 +65,7 @@ var blogModule =(function(){
                 var   reqLink = $('.nav_link').filter('[href="#' + currentId +'"]');
 
                 reqLink.closest('.nav_item').addClass('active').siblings().removeClass('active');
-  
+                window.location.hash = currentId;
             }
 
         });
