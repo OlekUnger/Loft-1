@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // +++++++++++++++++++++++B L O G ++++++++++++++++++++++++++++++++++
 
 var blogModule =(function(){
@@ -7,6 +12,7 @@ var blogModule =(function(){
     var     blog_nav = $('.blog_nav .nav'),
             blog_navTop = blog_nav.offset().top;
             blog_link = $('.blog_nav').find('.nav_link');
+            
 
     var init = function(){
         _setUpListners();
@@ -17,8 +23,10 @@ var blogModule =(function(){
         $(window).on('scroll', _fixed);
         $(window).on('scroll', _checkArticle);
         blog_link.on('click', _scrollToArticle);
+       
         
     };
+
 
     var _scrollToArticle = function(e){
         e.preventDefault();
@@ -82,6 +90,10 @@ var blogModule =(function(){
 })();
 
 blogModule.init();
+
+
+
+
 // ++++++++++++++++++++++VALIDATE -2++++++++++++++++++++++++++++++++
 // (function(){
 
