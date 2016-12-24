@@ -33,12 +33,11 @@ section.talkAbout
          form.feedback#feedbackForm
             .feedback_wrap
                .feedback_item
-                  input(type='text' placeholder='Ваше имя' name="f-name")
-                  .errorFlag Вы не указали имя
+                  input(type='text' placeholder='Ваше имя' name="f-name" required)
                .feedback_item    
-                  input(type='email' placeholder='Ваш email' name="f-email")
+                  input(type='email' placeholder='Ваш email' name="f-email" required)
                .feedback_item      
-                  textarea(name='comment', cols='10', rows='5', placeholder='Ваше сообщение'  gtp-content="Вы ничего не написали")
+                  textarea(name='comment', cols='10', rows='5', placeholder='Ваше сообщение'  required)
             .feedback_btnsBlock
                button.feedback_button.submit(type="submit") Отправить
                button.feedback_button(type="reset") Очистить
