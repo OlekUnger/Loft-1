@@ -5,7 +5,16 @@
 	padding-top: 6rem
 	min-height: 65rem
 	position: relative
-	
+	&_img
+		max-width: 600px
+		min-width: 300px
+		height: auto
+		max-height: 300px
+		margin: auto
+		overflow: hidden
+		img
+			width: 100%
+			height: auto	
 	&_wrap
 		padding: 6rem 0  5rem
 		display: flex
@@ -19,10 +28,10 @@
 	&_nav
 		width: 35%  
 		display: flex
-		justify-content: center  
+		justify-content: center
 		@include w992
-			display: none  
-			
+			padding-top: 10px
+
 	&_content
 		text-align: left
 		padding: 0px 6rem 0 0
@@ -38,6 +47,7 @@
 		font: 1.6rem/4.1rem 'Roboto', sans-serif
 		color: rgba(8, 60, 150, .7)
 		margin-bottom: 2rem
+
 	&_article
 		padding-bottom: 7rem
 		margin-bottom: 6.5rem
@@ -66,7 +76,17 @@
 			text-align: left
 		&_text
 			line-height: 2.6rem
-
+			text-align: justify
+			&-center
+				width: 100%
+				text-align: center
+				a:hover 
+					text-decoration: underline
+					color: $main-color
+			
+			
+.div
+	
 	.blog_title
 		color: #fff
 		position: absolute
@@ -75,21 +95,58 @@
 		text-align: center
 		width: 100%
 
+
+
 .codeExemple
 	width: 100%
 	height: 12.8rem
 	background-color: #ccc
 
 .blog_nav
+	height: 100%
+	width: 35%
+	min-width: 300px
+	@include w992
+		position: fixed
+		width: 320px
+		left: 0
+		top: 0
+		background-color: $main-color
+		transform: translateX(-100%)
+		z-index: 5
+		transition: all .2s ease-in-out
+	&.activeX
+		transform: translateX(0%)
+			
+	.before
+		display: none
+		position: absolute
+		@include size(50px)
+		background-color: $main-color
+		border-radius: 50%
+		top: 50%
+		right: -25px
+		cursor: pointer
+		@include w992
+			display: block
+	
 	.nav
 		display: flex
 		justify-content: center
+		width: 100%
 		&.fixed
 			width: 35%
 			margin-top: 2.5rem
 			position: fixed
 			top: 0
-			left: 0    
+			left: 0
+			@include w992
+				width: 300px
+				padding-top: 10px
+				// height: 100%
+		@include w992
+			width: 100%
+		// 	display: none    
 		&_list
 			width: 27.5rem
 		&_item
@@ -99,10 +156,15 @@
 					color: $main-color
 					font-family: 'RobotoMedium', sans-serif
 					box-shadow: inset -3px 0 0 #004cd1
+					@include w992
+						color: #fff
+						box-shadow: none
 		&_link
 			padding: .8rem 1.6rem .8rem 1rem
 			text-align: right
 			display: block
 			font: 1.6rem/2.6rem 'RobotoRegular', sans-serif
 			color: $dark
+			@include w992
+				color: rgba(255, 255, 255, .5)
 			

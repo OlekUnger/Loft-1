@@ -21,7 +21,7 @@ var parallaxModule = (function(){
         init: function(wScroll) {
             // this.move(bg1,wScroll, 85)
             this.move( bg2, wScroll, -85),
-            this.move(user, wScroll, 50);
+            this.move(user, wScroll, -70);
         }
     }
 }());
@@ -30,4 +30,8 @@ window.onscroll = function(){
     var wScroll = window.pageYOffset;
     parallaxModule.init(wScroll);
 };
+
+
+
+
 
