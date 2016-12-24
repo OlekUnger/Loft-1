@@ -9,28 +9,22 @@
     &_wrap
         display: flex
         margin: 0 auto
-        // padding: 0 4rem
         width: 90%
         position: relative
         overflow: hidden
-        // transition: .3s
-        // left: 0%
    
     &_item
         width: 100%
         background-color: #e3e2de
         height: 100%
-
-        position: absolute //
-        top: 0  //              
-        left: 0 //
-        z-index: 0  //
-
+        position: absolute 
+        top: 0                
+        left: 0 
+        z-index: 0  
         display: flex
-        // padding: 0px 4rem
-        &.active //
-            position: relative //
-            z-index: 1 //
+        &.active 
+            position: relative 
+            z-index: 1 
         &.inslide
             z-index: 2
         @include w992
@@ -95,6 +89,7 @@
     transition: all ease-in-out .1s
     fill: $main-color
     fill-opacity: .7
+    cursor: pointer
     &:hover
         fill-opacity: 1
     &-left
