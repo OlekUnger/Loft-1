@@ -2,7 +2,7 @@
 
 var validate = function(){
 
-    var validateForm = $('form');
+    var validateForm = $('#autorizeForm');
 
     validateForm.each(function(){
     
