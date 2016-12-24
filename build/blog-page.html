@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" ,="" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Blog</title>
+    <link rel="shortcut icon" href="assets/img/fav-night.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+  </head>
+  <body>
+    <div class="container">
+      <section class="headerSection" id="header">
+        <div class="parallax">
+          <div class="layer-1"></div>
+          <div class="layer-2"><img src="./assets/img/mount.png"></div>
+        </div>
+        <div class="header_wrap">
+          <header class="header">
+            <div class="socials"><a class="socials_link" href="https://vk.com/ungers">
+                <svg class="socials_icon">
+                  <use xlink:href="./assets/img/sprite/sprite.svg#vk"></use>
+                </svg>vkontakte</a><a class="socials_link" href="https://github.com/OlekUnger">
+                <svg class="socials_icon">
+                  <use xlink:href="./assets/img/sprite/sprite.svg#github"></use>
+                </svg>Github </a><a class="socials_link" href="#">
+                <svg class="socials_icon">
+                  <use xlink:href="./assets/img/sprite/sprite.svg#in"></use>
+                </svg>Instagramm</a></div><a class="menuButton"><span></span></a>
+          </header>
+          <div class="blockUser-wrap">
+            <div class="starsWrap">
+              <svg class="starsIcon" vewbox="0 0 460 270" preserveAspectRatio="none">
+                <use xlink:href="assets/img/sprite/sprite2.svg#stars1"></use>
+              </svg>
+            </div>
+            <div class="blockUser_info">
+              <div class="blockUser_photo"><img src="./assets/img/Me.png"></div>
+              <h3 class="blockUser_title">Олег Унгер</h3>
+              <p class="blockUser_text">Личный сайт веб разработчика</p>
+            </div>
+          </div><a class="scrollDown" href="#content">
+            <svg class="scrollDown_icon">
+              <use xlink:href="assets/img/sprite/sprite.svg#arrow_down"></use>
+            </svg></a>
+        </div>
+      </section>
+      <section class="content blog blogPage" id="content">
+        <div class="content_top">
+          <div class="blockSVG">
+            <svg class="triangle triangle-left" viewbox="0 0 300 160" preserveaspectratio="none">
+              <polygon points="0,160 0,0 300,160"></polygon>
+            </svg>
+          </div>
+          <div class="blockSVG">
+            <svg class="triangle triangle-right" viewbox="0 0 300 160" preserveaspectratio="none">
+              <polygon points="0,160 300,0 300,160"></polygon>
+            </svg>
+          </div>
+        </div>
+        <div class="blog_wrap">
+          <aside class="blog_nav">
+            <div class="before"></div>
+            <nav class="nav">
+              <ul class="nav_list">
+                <li class="nav_item"><a class="nav_link" href="#one">Магия flex-box против дубовых шкафов.</a></li>
+                <li class="nav_item"><a class="nav_link" href="#two">
+                    Приемы в верстке, без которых
+                    не обходится ни один сайт</a></li>
+                <li class="nav_item"><a class="nav_link" href="#three">
+                    Самый необходимый набор Gulp
+                    плагинов</a></li>
+                <li class="nav_item"><a class="nav_link" href="#four">Почему я выбрал PUG</a></li>
+              </ul>
+            </nav>
+          </aside>
+          <main class="blog_content">
+            <article class="blog_article" data-article="one">
+              <h3 class="content_title">Магия flex-box против дубовых шкафов.</h3><span class="blog_date"> 20 декабря 2016</span>
+              <p class="content_text">Говорят, раньше сайты верстались при помощи
+                <del> глиняных дощечек</del>
+                Тяжелое, должно быть, было время. Год назад, когда я только начинал свои первые робкие
+                шаги в веб разработке, нас на курсе для начинающих обучали традиционно, что позиционирование
+                элементов осуществляется при помощи margin, padding, float, inline-block и т.д. Вкратце упомянули
+                про flex-box, добавив при этом, что метод этот очень хорош но, к сожалению, еще не везде поддерживается,
+                поэтому использовать его нужно с осторожностью, а лучше пока не использовать вовсе. Наконец, настало время
+                и теперь старая верстка, тем более табличная, кажется громоздким бабушкиным дубовым шкафом в сравнении с
+                антигравитационными капсулами flex-box. Flex метод позволяет, наконец, избавиться от многочисленных оберток
+                и оберток для оберток контейнеров и элементов, которые до этого позиционировали свое содержимое в пространстве
+                страниц сайта, и использовать их только при необходимости. 
+              </p>
+              <div class="blog_img"><a href="assets/img/001.png"><img src="assets/img/001.png"></a></div>
+              <p class="content_text">
+                Магия - это слово в веб разработке я слышу довольно часто. Когда ты своими нехитрыми действиями заставляешь оживать
+                статичные виртуальные объекты - это чем-то похоже, пока не начнешь воспринимать это обыденно. Флексы творят свою магию,
+                заставляя элементы растягиваться и сжиматься, перемещаться, меняясь местами и располагая их в пространстве без
+                использования распорок, костылей и домкратов. 
+              </p>
+              <div class="blog_img"><img src="assets/img/12.jpg"></div>
+              <p class="content_text">     
+                Только захоти - и элементы выстроятся в ряд. Трах-тибидох! - и они расположились колонкой, вот они уже парят кучкой
+                в центре или размазались по краям. И никакой магии, just flex-box! 
+              </p>
+              <div class="blog_img"><a href="assets/img/flex.png"><img src="assets/img/flex.png"></a></div>
+              <p class="content_text content_text-center"><a href="http://the-echoplex.net/flexyboxes/" target="blank_">Поколдовать</a></p>
+            </article>
+            <article class="blog_article" data-article="two">
+              <h3 class="content_title">Приёмы в вёрстке, без которых не обходится ни один сайт</h3><span class="blog_date">13 ноября 2016</span>
+              <p class="content_text">
+                Таким образом начало повседневной работы по формированию позиции позволяет выполнять
+                важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый
+                опыт новая модель организационной деятельности играет важную роль в формировании новых
+                предложений. Товарищи! новая модель организационной деятельности играет важную роль в
+                формировании систем массового участия.
+              </p>
+              <p class="content_text">
+                Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому
+                кругу (специалистов) участие в формировании систем массового участия. Идейные соображения
+                высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
+                (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных
+                задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки
+                и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой
+                процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+              </p>
+            </article>
+            <article class="blog_article" data-article="three">
+              <h3 class="content_title">Самый нещбходимый набор Gulp плагинов</h3><span class="blog_date">22 ноября 2016</span>
+              <p class="content_text">
+                Таким образом начало повседневной работы по формированию позиции
+                позволяет выполнять важные задания по разработке направлений прогрессивного
+                развития. Разнообразный и богатый опыт новая модель организационной деятельности
+                играет важную роль в формировании новых предложений. Товарищи! новая модель
+                организационной деятельности играет важную роль в формировании систем массового участия.
+              </p>
+              <p class="content_text">
+                Не следует, однако забывать, что укрепление и развитие структуры обеспечивает
+                широкому кругу (специалистов) участие в формировании систем массового участия.
+                Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает
+                широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками
+                в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера
+                нашей активности способствует подготовки и реализации модели развития. С другой стороны
+                рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров,
+                соответствует насущным потребностям.
+              </p>
+              <div class="codeExemple"></div>
+            </article>
+            <article class="blog_article" data-article="four">
+              <h3 class="content_title">Почему я выбрал PUG</h3><span class="blog_date">13 ноября 2016</span>
+              <p class="content_text">
+                Таким образом начало повседневной работы по формированию позиции позволяет выполнять
+                важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый
+                опыт новая модель организационной деятельности играет важную роль в формировании новых
+                предложений. Товарищи! новая модель организационной деятельности играет важную роль в
+                формировании систем массового участия.
+              </p>
+              <p class="content_text">
+                Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому
+                кругу (специалистов) участие в формировании систем массового участия. Идейные соображения
+                высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
+                (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных
+                задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки
+                и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой
+                процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+              </p>
+            </article>
+          </main>
+        </div>
+        <footer class="pageFooter">
+          <div class="pageFooter_content">
+            <div class="pageFooter_contentBlock">
+              <p class="pageFooter_text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+            </div>
+            <div class="pageFooter_contentBlock"> 
+              <nav class="nav">
+                <ul class="nav_list">
+                  <li class="nav_item"><a class="nav_link" href="my-works-page.html">Мои работы</a></li>
+                  <li class="nav_item"><a class="nav_link" href="blog-page.html">Блог</a></li>
+                  <li class="nav_item"><a class="nav_link" href="about-me-page.html">Обо мне</a></li>
+                  <li class="nav_item"><a class="nav_link" href="index.html">Авторизация</a></li>
+                </ul>
+              </nav>
+              <div class="socials"><a class="socials_link" href="#">
+                  <svg class="socials_icon">
+                    <use xlink:href="./assets/img/sprite/sprite.svg#vk"></use>vkontakte
+                  </svg></a><a class="socials_link" href="#">
+                  <svg class="socials_icon">
+                    <use xlink:href="./assets/img/sprite/sprite.svg#github"></use>
+                  </svg>Github</a><a class="socials_link" href="#">
+                  <svg class="socials_icon">
+                    <use xlink:href="./assets/img/sprite/sprite.svg#in"></use>
+                  </svg>Instagramm</a></div>
+            </div>
+            <div class="pageFooter_contentBlock">
+              <p class="pageFooter_text">Skype: ungers37</p>
+              <p class="pageFooter_text">ounger@inbox.ru</p>
+              <p class="pageFooter_text">+7 921 441 66 75</p>
+              <p class="pageFooter_text">Санкт-Петербург</p>
+            </div>
+          </div>
+          <div class="pageFooter-bottom">
+            <p class="pageFooter_text"> &copy; | Олег Унгер | Создано с любовью в Loftschool | 2016</p>
+          </div>
+        </footer>
+      </section>
+      <div class="fullScreenMenu">
+        <div class="overlay overlay-left"></div>
+        <div class="overlay overlay-right"></div>
+        <nav class="nav">
+          <ul class="nav_list">
+            <li class="nav_item"><a class="nav_link" href="my-works-page.html">Мои работы</a></li>
+            <li class="nav_item"><a class="nav_link" href="blog-page.html">Блог</a></li>
+            <li class="nav_item"><a class="nav_link" href="about-me-page.html">Обо мне</a></li>
+            <li class="nav_item"><a class="nav_link" href="index.html">Авторизация</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="preloader">
+      <div class="preloader_spinner">
+        <div class="preloader_animation"></div>
+        <div class="preloader_percents">0%</div>
+      </div>
+    </div>
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

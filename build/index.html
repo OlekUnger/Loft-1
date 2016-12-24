@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" ,="" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Ungers.ru</title>
+    <link rel="shortcut icon" href="assets/img/fav-night.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+  </head>
+  <body>
+    <div class="container">
+      <section class="autorization">
+        <div class="layer-1"></div>
+        <div class="layer-2"><img src="./assets/img/mount.png"></div>
+        <div class="autorizeWrap">
+          <button class="autorize_btn">Авторизоваться</button>
+          <div class="flipContainer">
+            <div class="flipper">
+              <div class="blockUser front">
+                <div class="blockUser_info">
+                  <div class="blockUser_photo"><img src="./assets/img/Me.png"></div>
+                  <h3 class="blockUser_title">Олег Унгер</h3>
+                  <p class="blockUser_text">Личный сайт веб разработчика</p>
+                </div>
+                <div class="socials"><a class="socials_link" href="https://vk.com/ungers">
+                    <svg class="socials_icon">
+                      <use xlink:href="./assets/img/sprite/sprite.svg#vk"></use>
+                    </svg>vkontakte</a><a class="socials_link" href="https://github.com/OlekUnger">
+                    <svg class="socials_icon">
+                      <use xlink:href="./assets/img/sprite/sprite.svg#github"></use>
+                    </svg>Github </a><a class="socials_link" href="#">
+                    <svg class="socials_icon">
+                      <use xlink:href="./assets/img/sprite/sprite.svg#in"></use>
+                    </svg>Instagramm</a></div>
+                <nav class="blockUser_nav nav">
+                  <ul class="nav_list">
+                    <li class="nav_item"><a class="nav_link" href="my-works-page.html">Мои работы</a></li>
+                    <li class="nav_item"><a class="nav_link" href="about-me-page.html">Обо мне</a></li>
+                    <li class="nav_item"><a class="nav_link" href="blog-page.html">Блог</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="blockUser back">
+                <h3 class="content_title">Авторизуйтесь</h3>
+                <form class="autorizeForm" id="autorizeForm">
+                  <div class="formWrap">
+                    <div class="inputWrap">
+                      <input class="formField" id="login" type="text" name="login" placeholder="Логин" required>
+                      <label class="formLabel" for="login">
+                        <svg class="formIcon">
+                          <use xlink:href="./assets/img/sprite/sprite.svg#login"></use>
+                        </svg>
+                      </label>
+                      <div class="errorFlag login">Вы не ввели логин            </div>
+                    </div>
+                    <div class="inputWrap">
+                      <input class="formField" id="login" type="password" name="password" placeholder="Пароль" required>
+                      <label class="formLabel" for="password">
+                        <svg class="formIcon">
+                          <use xlink:href="./assets/img/sprite/sprite.svg#password"></use>
+                        </svg>
+                      </label>
+                      <div class="errorFlag password">Вы не ввели пароль </div>
+                    </div>
+                    <label class="checkLabel" for="checkbox">Я человек   
+                      <input type="checkbox" id="checkbox" name="agree"><span class="checkboxIndicator">
+                        <svg class="checkIcon">
+                          <use xlink:href="./assets/img/sprite/sprite.svg#check"></use>
+                        </svg></span>
+                    </label>
+                    <fieldset>
+                      <legend>Вы точно не робот?</legend>
+                      <div class="radioWrap">
+                        <input id="radio-1" type="radio" name="capcha" value="Да" checked>
+                        <label class="radioLabel" for="radio-1">Да</label>
+                        <input id="radio-2" type="radio" name="capcha" value="Нет" data-rule="required">
+                        <label class="radioLabel" for="radio-2">Не уверен</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <nav class="blockUser_nav nav">
+                    <ul class="nav_list">
+                      <li class="nav_item"><a class="nav_link flipBack" href="#">На главную</a></li>
+                      <li class="nav_item">
+                        <button class="nav_link submit" type="submit">Войти</button>
+                      </li>
+                    </ul>
+                  </nav>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="pageFooter-bottom">
+            <p class="pageFooter_text">&copy; | Олег Унгер | Создано с любовью в Loftschool | 2016</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="assets/js/foundation.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
