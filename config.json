@@ -1,0 +1,39 @@
+{
+	"defaultPage": "index.html",
+	"page404": "404.html",
+	"mime": {
+		".html": {
+			"type": "text/html",
+			"encoding": "utf-8"
+		},
+		".css": {
+			"type": "text/css",
+			"encoding": "utf-8"
+		},
+		".js": {
+			"type": "application/javascript",
+			"encoding": "utf-8"
+		},
+		".jpg": {
+			"type": "image/jpeg",
+			"encoding": ""
+		},
+		".png":{
+			"type": "image/png",
+			"encoding": ""
+		},
+		".svg": {
+			"type": "image/svg+xml",
+			"encoding": ""
+		},
+	
+		".ttf": {
+			"type": "font/ttf",
+			"encoding": ""
+		},
+		".ico": {
+			"type": "image/x-icon",
+			"encoding": ""
+		}
+	}
+}
