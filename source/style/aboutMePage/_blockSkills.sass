@@ -26,6 +26,7 @@
             justify-content: center
         &_item
             @include size(110px)
+            // transform: rotate(-90deg)
             position: relative
             font: 1.2rem/1.5rem 'RobotoMedium', sans-serif
             text-align: center
@@ -53,6 +54,45 @@
             fill: none
         circle:nth-child(2)
             stroke: $main-color
-            stroke-dasharray: 162
-            stroke-dashoffset: 762
+            transform: rotate(-90deg)
+            transform-origin:  55px 55px
+            stroke-dasharray: 660
+            stroke-dashoffset: 450
             transition: all 1s
+#skill-1,
+#skill-2
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 400
+#skill-3
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 630
+#skill-4
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 660
+#skill-5
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 660
+#skill-6
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 640
+#skill-7
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 640
+#skill-8
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 500
+#skill-9
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 550
+#skill-10
+    circle:nth-child(2)
+        stroke-dasharray: 660
+        stroke-dashoffset: 600
