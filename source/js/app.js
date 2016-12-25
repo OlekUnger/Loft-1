@@ -4,8 +4,8 @@
 var blogModule =(function(){
 
 
-    var     blog_nav = $('.blog_nav nav'),
-            blog_navTop = blog_nav.offset().top;
+    var     blog_nav = $('.blog_nav .nav'),
+            blog_navTop = blog_nav.offset().top,
             blog_link = $('.blog_nav').find('.nav_link'),
             button = $('.before');
 
@@ -17,7 +17,8 @@ var blogModule =(function(){
     var _setUpListners = function(){
         $(window).on('scroll', _fixed);
         $(window).on('scroll', _checkArticle);
-        blog_link.on('click', _scrollToArticle, _activeXOut);
+        blog_link.on('click', _scrollToArticle);
+        blog_link.on('click',  _activeXOut);
         button.on('click', _activeX);    
     };
 
@@ -48,9 +49,8 @@ var blogModule =(function(){
     };
 
     var _activeXOut = function(){
-        $('.nav.')
-    }
-
+        $('.blog_nav').removeClass('activeX');
+    };
 
     var _showArticle = function(article, isAnimate){
        var direction = article.replace(/#/, ''),
