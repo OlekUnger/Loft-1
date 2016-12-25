@@ -1,10 +1,10 @@
 
 var http = require('http'),
 	fs = require('fs'),
- 	utils = require('./utils'),
- 	path = require('path'),
- 	config = require('./config.json');
- 	
+	utils = require('./utils'),
+	path = require('path'),
+	config = require('./config.json');
+	
 var server = http.createServer(function(req, res){
 	console.log('Поступил запрос', req.url);
 
@@ -37,6 +37,6 @@ var server = http.createServer(function(req, res){
 		});
 	
 });
-server.listen(8080);
+server.listen(8888);
 
 
