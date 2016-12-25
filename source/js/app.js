@@ -22,8 +22,7 @@ var blogModule =(function(){
     var _setUpListners = function(){
         $(window).on('scroll', _fixed);
         $(window).on('scroll', _checkArticle);
-        blog_link.on('click', _scrollToArticle);
-        blog_link.on('click', _activeXOut);
+        blog_link.on('click', _scrollToArticle, _activeXOut);
         button.on('click', _activeX);    
     };
 
@@ -52,9 +51,10 @@ var blogModule =(function(){
         $('.blog_nav').toggleClass('activeX');
         
     };
+
     var _activeXOut = function(){
-        $('.blog_nav').removeClass('activeX');
-    };
+        $('.nav.')
+    }
 
 
     var _showArticle = function(article, isAnimate){
