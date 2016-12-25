@@ -34,6 +34,10 @@
 		".ico": {
 			"type": "image/x-icon",
 			"encoding": ""
+		},
+		".mp4": {
+			"type": "video/mp4",
+			"encoding": ""
 		}
 	}
 }
