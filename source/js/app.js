@@ -1,9 +1,4 @@
 
-
-
-
-
-
 // +++++++++++++++++++++++B L O G ++++++++++++++++++++++++++++++++++
 
 var blogModule =(function(){
@@ -88,8 +83,6 @@ var blogModule =(function(){
         });
 
     };
-
-
 
     return {
         init: init
